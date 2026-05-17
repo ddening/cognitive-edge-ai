@@ -1,6 +1,7 @@
 {
 	"name": "Cognitive Edge AI",
 	"build": {
+		"context": "..",
 		"dockerfile": "Dockerfile"
 	},
 	"features": {
