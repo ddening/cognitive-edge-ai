@@ -8,7 +8,7 @@
 		"ghcr.io/devcontainers/features/python:1": {
 			"installTools": true,
 			"installJupyterlab": true,
-			"version": "3.14.2"
+			"version": "3.13"
 		}
 	},
 	"customizations": {
