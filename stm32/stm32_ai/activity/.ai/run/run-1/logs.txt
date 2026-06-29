@@ -1,0 +1,9 @@
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe analyze --model C:\Users\workstation-uni\Documents\GitHub Repos\research_master\cognitive-edge-ai\models\kognihome_int8.tflite --batch-size 10 --mode host --st-neural-art user_profile@C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\kognihome\.ai\run\run-1\.ai\profile-neural-art.json --name network --verbosity 1 --c-api st-ai --target stm32n6 --workspace C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\kognihome\.ai\run\run-1\.ai\st_ai_ws --output C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\kognihome\.ai\run\run-1\.ai\st_ai_output
+ST Edge AI Core v4.0.1-20581 7ed50de05
+
+E010(InvalidModelError): Non-numerical or not-string elements in sequential_1_dense_1_MatMul's parameter out_0
+
+Run failed: Error: analyze error: E010(InvalidModelError): Non-numerical or not-string elements in sequential_1_dense_1_MatMul's parameter out_0. Please check the report for more details. Output: ST Edge AI Core v4.0.1-20581 7ed50de05
+PASS:   0%|          | 0/103 [00:00<?, ?it/s]                                                      
+E010(InvalidModelError): Non-numerical or not-string elements in sequential_1_dense_1_MatMul's parameter out_0
+ 

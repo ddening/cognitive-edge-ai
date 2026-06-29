@@ -1,0 +1,14 @@
+{
+  "toolchain": "STM32CubeIDE",
+  "variant": "ApplicationTemplate",
+  "fromMx": false,
+  "isGenerated": false,
+  "name": "sine_wave",
+  "createdAt": 1780955243347,
+  "lastModified": 1780955243361,
+  "lastAccessed": 1780955243360,
+  "path": "C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\stm32\\stm32_ai",
+  "board": "STM32N6570-DK",
+  "mcu": "",
+  "type": "BYOM"
+}

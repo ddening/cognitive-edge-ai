@@ -1,0 +1,44 @@
+{
+  "args": {
+    "model": "C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\research_master\\cognitive-edge-ai\\models\\kognihome_int8.tflite",
+    "valinput": "",
+    "valoutput": "",
+    "batch-size": 10,
+    "mode": "host",
+    "name": "network",
+    "verbosity": 1,
+    "c-api": "st-ai",
+    "optimization": "balanced",
+    "target": "stm32n6",
+    "memory-pool": "C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\stm32\\stm32_ai\\kognihome\\.ai\\run\\run-2\\.ai\\mempools.json"
+  },
+  "mempools": [
+    {
+      "name": "RAM",
+      "size": 2097152,
+      "offset": 872415232,
+      "driver": "RAM",
+      "max": 2097152,
+      "mode_available": []
+    },
+    {
+      "name": "AXISRAM3_4_5_6",
+      "size": 1835008,
+      "offset": 874512384,
+      "driver": "AXISRAM3_4_5_6",
+      "max": 1835008,
+      "mode_available": []
+    },
+    {
+      "driver": "xSPI1",
+      "name": "xSPI1",
+      "max": 32505856,
+      "offset": 2415919104,
+      "size": 32505856,
+      "mode_available": []
+    }
+  ],
+  "exportWeightsAsBin": false,
+  "copyWeightsToRam": false,
+  "automaticFlash": true
+}

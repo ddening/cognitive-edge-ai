@@ -1,0 +1,173 @@
+digraph G {
+graph [ fontsize=11 ];
+node [ fontsize=11 ];
+edge [ fontsize=10 ];
+rankdir=BU
+ranksep=1.5
+nodesep=1
+splines=spline
+compound=true
+Graphinfo [ label="" shape=plaintext, style=rounded, color=black, fontname="Arial-Bold" ];
+subgraph cluster_1 { label="epoch 1"; fontsize=14; 
+subgraph cluster_1_nodes { label="nodes "; peripheries=0;
+Gemm_1_reshape_x_2 ;  }
+
+subgraph cluster_dma_1_in { label=""; peripheries=0;
+dummy_1[ style=invis ];  };
+ }
+subgraph cluster_2 { label="epoch 2"; fontsize=14; 
+subgraph cluster_2_nodes { label="nodes "; peripheries=0;
+Gemm_1_conv_4 ;  }
+
+subgraph cluster_dma_2_in { label=""; peripheries=0;
+dummy_2[ style=invis ];  };
+ }
+Gemm_1_reshape_x_2:s -> dummy_2:n [ltail="cluster_1" lhead=cluster_2 strength=1000 penwidth=5];
+subgraph cluster_3 { label="epoch 3"; fontsize=14; 
+subgraph cluster_3_nodes { label="nodes "; peripheries=0;
+Gemm_1_squeeze_y_5 ;  }
+
+subgraph cluster_dma_3_in { label=""; peripheries=0;
+dummy_3[ style=invis ];  };
+ }
+Gemm_1_conv_4:s -> dummy_3:n [ltail="cluster_2" lhead=cluster_3 strength=1000 penwidth=5];
+subgraph cluster_4 { label="epoch 4"; fontsize=14; 
+subgraph cluster_4_nodes { label="nodes "; peripheries=0;
+Gemm_1_add_6 ;  }
+
+subgraph cluster_dma_4_in { label=""; peripheries=0;
+dummy_4[ style=invis ];  };
+ }
+Gemm_1_squeeze_y_5:s -> dummy_4:n [ltail="cluster_3" lhead=cluster_4 strength=1000 penwidth=5];
+subgraph cluster_5 { label="epoch 5"; fontsize=14; 
+subgraph cluster_5_nodes { label="nodes "; peripheries=0;
+Relu_2 ;  }
+
+subgraph cluster_dma_5_in { label=""; peripheries=0;
+dummy_5[ style=invis ];  };
+ }
+Gemm_1_add_6:s -> dummy_5:n [ltail="cluster_4" lhead=cluster_5 strength=1000 penwidth=5];
+subgraph cluster_6 { label="epoch 6"; fontsize=14; 
+subgraph cluster_6_nodes { label="nodes "; peripheries=0;
+Gemm_3_reshape_x_9 ;  }
+
+subgraph cluster_dma_6_in { label=""; peripheries=0;
+dummy_6[ style=invis ];  };
+ }
+Relu_2:s -> dummy_6:n [ltail="cluster_5" lhead=cluster_6 strength=1000 penwidth=5];
+subgraph cluster_7 { label="epoch 7"; fontsize=14; 
+subgraph cluster_7_nodes { label="nodes "; peripheries=0;
+Gemm_3_conv_11 ;  }
+
+subgraph cluster_dma_7_in { label=""; peripheries=0;
+dummy_7[ style=invis ];  };
+ }
+Gemm_3_reshape_x_9:s -> dummy_7:n [ltail="cluster_6" lhead=cluster_7 strength=1000 penwidth=5];
+subgraph cluster_8 { label="epoch 8"; fontsize=14; 
+subgraph cluster_8_nodes { label="nodes "; peripheries=0;
+Gemm_3_squeeze_y_12 ;  }
+
+subgraph cluster_dma_8_in { label=""; peripheries=0;
+dummy_8[ style=invis ];  };
+ }
+Gemm_3_conv_11:s -> dummy_8:n [ltail="cluster_7" lhead=cluster_8 strength=1000 penwidth=5];
+subgraph cluster_9 { label="epoch 9"; fontsize=14; 
+subgraph cluster_9_nodes { label="nodes "; peripheries=0;
+Gemm_3_add_13 ;  }
+
+subgraph cluster_dma_9_in { label=""; peripheries=0;
+dummy_9[ style=invis ];  };
+ }
+Gemm_3_squeeze_y_12:s -> dummy_9:n [ltail="cluster_8" lhead=cluster_9 strength=1000 penwidth=5];
+subgraph cluster_10 { label="epoch 10"; fontsize=14; 
+subgraph cluster_10_nodes { label="nodes "; peripheries=0;
+Relu_4 ;  }
+
+subgraph cluster_dma_10_in { label=""; peripheries=0;
+dummy_10[ style=invis ];  };
+ }
+Gemm_3_add_13:s -> dummy_10:n [ltail="cluster_9" lhead=cluster_10 strength=1000 penwidth=5];
+subgraph cluster_11 { label="epoch 11"; fontsize=14; 
+subgraph cluster_11_nodes { label="nodes "; peripheries=0;
+Gemm_5_reshape_x_16 ;  }
+
+subgraph cluster_dma_11_in { label=""; peripheries=0;
+dummy_11[ style=invis ];  };
+ }
+Relu_4:s -> dummy_11:n [ltail="cluster_10" lhead=cluster_11 strength=1000 penwidth=5];
+subgraph cluster_12 { label="epoch 12"; fontsize=14; 
+subgraph cluster_12_nodes { label="nodes "; peripheries=0;
+Gemm_5_conv_18 ;  }
+
+subgraph cluster_dma_12_in { label=""; peripheries=0;
+dummy_12[ style=invis ];  };
+ }
+Gemm_5_reshape_x_16:s -> dummy_12:n [ltail="cluster_11" lhead=cluster_12 strength=1000 penwidth=5];
+subgraph cluster_13 { label="epoch 13"; fontsize=14; 
+subgraph cluster_13_nodes { label="nodes "; peripheries=0;
+Gemm_5_squeeze_y_19 ;  }
+
+subgraph cluster_dma_13_in { label=""; peripheries=0;
+dummy_13[ style=invis ];  };
+ }
+Gemm_5_conv_18:s -> dummy_13:n [ltail="cluster_12" lhead=cluster_13 strength=1000 penwidth=5];
+subgraph cluster_14 { label="epoch 14"; fontsize=14; 
+subgraph cluster_14_nodes { label="nodes "; peripheries=0;
+Gemm_5_add_20 ;  }
+
+subgraph cluster_dma_14_in { label=""; peripheries=0;
+dummy_14[ style=invis ];  };
+ }
+Gemm_5_squeeze_y_19:s -> dummy_14:n [ltail="cluster_13" lhead=cluster_14 strength=1000 penwidth=5];
+subgraph cluster_15 { label="epoch 15"; fontsize=14; 
+subgraph cluster_15_nodes { label="nodes "; peripheries=0;
+__NN__RETURN__ ;  }
+
+subgraph cluster_dma_15_in { label=""; peripheries=0;
+dummy_15[ style=invis ];  };
+ }
+Gemm_5_add_20:s -> dummy_15:n [ltail="cluster_14" lhead=cluster_15 strength=1000 penwidth=5];
+Gemm_5_bias [ label="{ { <i0> 0} |  [56]\lGemm_5_bias\l(bytes=4 , 0.31% of total)\l\l -0.270581 | { <o0> 0} }", shape=record, fillcolor="aliceblue", style="rounded,filled"  ] ;
+Gemm_3_bias [ label="{ { <i0> 0} |  [36]\lGemm_3_bias\l(bytes=64 , 5% of total)\l\l -0.516567 0.38756 -0.344654 0.396643 ... | { <o0> 0} }", shape=record, fillcolor="aliceblue", style="rounded,filled"  ] ;
+Gemm_1_bias [ label="{ { <i0> 0} |  [16]\lGemm_1_bias\l(bytes=64 , 5% of total)\l\l -0.127058 0.679311 0 -0.00851497 ... | { <o0> 0} }", shape=record, fillcolor="aliceblue", style="rounded,filled"  ] ;
+Gemm_1_weights_transposed_3 [ label="{ { <i0> 0} |  [8]\lGemm_1_weights_transposed_3\l(bytes=64 , 5% of total)\l\l 0.624343 0.247844 -0.0910439 -0.000359858 ... | { <o0> 0} }", shape=record, fillcolor="aliceblue", style="rounded,filled"  ] ;
+Gemm_5_weights_transposed_17 [ label="{ { <i0> 0} |  [48]\lGemm_5_weights_transposed_17\l(bytes=64 , 5% of total)\l\l 1.6131 0.871881 0.321977 0.877682 ... | { <o0> 0} }", shape=record, fillcolor="aliceblue", style="rounded,filled"  ] ;
+Input_0_out_0 [ label="{ { <i0> 0} |  [0]\lInput_0_out_0 | { <o0> 0} }", shape=record, fillcolor="aliceblue", style="rounded,filled"  ] ;
+Gemm_3_weights_transposed_10 [ label="{ { <i0> 0} |  [28]\lGemm_3_weights_transposed_10\l(bytes=1024 , 80% of total)\l\l 0.140419 -0.202576 -0.18511 -0.011947 ... | { <o0> 0} }", shape=record, fillcolor="aliceblue", style="rounded,filled"  ] ;
+Gemm_1_reshape_x_2 [ label="{ { < i0>  0 M } | id=[6] tid=[7]\lGemm_1_reshape_x_2\lkind=Reshape\lsched epoch=1.\lhw unit=NULL_UNIT\l | { < o0>  0 M } }", shape=record, fillcolor="aquamarine", style="rounded,filled"  ] ;
+Gemm_1_conv_4 [ label="{ { < i0>  0 M  | < i1>  1 M } | id=[10] tid=[8]\lGemm_1_conv_4\lkind=Conv\lNUM_OPS = 32 OPS( 2.8% of total )\llatency = 33 cycles\lOPS/cycle = 0.97\lsched epoch=2.\lsched unit= PROCESSOR 0\lkernel_shape is 1 1\lgroup i 1\lstrides is 1 1\lpads is 0 0 0 0\ldilations is 1 1\l | { < o0>  0 M } }", shape=record, fillcolor="burlywood1", style="rounded,filled"  ] ;
+Gemm_1_squeeze_y_5 [ label="{ { < i0>  0 M } | id=[14] tid=[9]\lGemm_1_squeeze_y_5\lkind=Reshape\lsched epoch=3.\lhw unit=NULL_UNIT\l | { < o0>  0 M } }", shape=record, fillcolor="cadetblue1", style="rounded,filled"  ] ;
+Gemm_1_add_6 [ label="{ { < i0>  0 M  | < i1>  1 M } | id=[18] tid=[10]\lGemm_1_add_6\lkind=Add\lNUM_OPS = 16 OPS\llatency = 48 cycles\lOPS/cycle = 0.333333\lsched epoch=4.\lsched unit= PROCESSOR 0\l | { < o0>  0 M } }", shape=record, fillcolor="chartreuse", style="rounded,filled"  ] ;
+Relu_2 [ label="{ { < i0>  0 M } | id=[20] tid=[11]\lRelu_2\lkind=Relu\llatency = 32 cycles\lsched epoch=5.\lsched unit= PROCESSOR 0\l | { < o0>  0 M } }", shape=record, fillcolor="chocolate1", style="rounded,filled"  ] ;
+Gemm_3_reshape_x_9 [ label="{ { < i0>  0 M } | id=[26] tid=[12]\lGemm_3_reshape_x_9\lkind=Reshape\lsched epoch=6.\lhw unit=NULL_UNIT\l | { < o0>  0 M } }", shape=record, fillcolor="cyan", style="rounded,filled"  ] ;
+Gemm_3_conv_11 [ label="{ { < i0>  0 M  | < i1>  1 M } | id=[30] tid=[13]\lGemm_3_conv_11\lkind=Conv\lNUM_OPS = 512 OPS( 44% of total )\llatency = 288 cycles\lOPS/cycle = 1.8\lsched epoch=7.\lsched unit= PROCESSOR 0\lkernel_shape is 1 1\lgroup i 1\lstrides is 1 1\lpads is 0 0 0 0\ldilations is 1 1\l | { < o0>  0 M } }", shape=record, fillcolor="darkolivegreen1", style="rounded,filled"  ] ;
+Gemm_3_squeeze_y_12 [ label="{ { < i0>  0 M } | id=[34] tid=[14]\lGemm_3_squeeze_y_12\lkind=Reshape\lsched epoch=8.\lhw unit=NULL_UNIT\l | { < o0>  0 M } }", shape=record, fillcolor="deepskyblue1", style="rounded,filled"  ] ;
+Gemm_3_add_13 [ label="{ { < i0>  0 M  | < i1>  1 M } | id=[38] tid=[15]\lGemm_3_add_13\lkind=Add\lNUM_OPS = 16 OPS\llatency = 48 cycles\lOPS/cycle = 0.333333\lsched epoch=9.\lsched unit= PROCESSOR 0\l | { < o0>  0 M } }", shape=record, fillcolor="gold", style="rounded,filled"  ] ;
+Relu_4 [ label="{ { < i0>  0 M } | id=[40] tid=[16]\lRelu_4\lkind=Relu\llatency = 32 cycles\lsched epoch=10.\lsched unit= PROCESSOR 0\l | { < o0>  0 M } }", shape=record, fillcolor="green", style="rounded,filled"  ] ;
+Gemm_5_reshape_x_16 [ label="{ { < i0>  0 M } | id=[46] tid=[17]\lGemm_5_reshape_x_16\lkind=Reshape\lsched epoch=11.\lhw unit=NULL_UNIT\l | { < o0>  0 M } }", shape=record, fillcolor="hotpink", style="rounded,filled"  ] ;
+Gemm_5_conv_18 [ label="{ { < i0>  0 M  | < i1>  1 M } | id=[50] tid=[18]\lGemm_5_conv_18\lkind=Conv\lNUM_OPS = 32 OPS( 2.8% of total )\llatency = 33 cycles\lOPS/cycle = 0.97\lsched epoch=12.\lsched unit= PROCESSOR 0\lkernel_shape is 1 1\lgroup i 1\lstrides is 1 1\lpads is 0 0 0 0\ldilations is 1 1\l | { < o0>  0 M } }", shape=record, fillcolor="khaki1", style="rounded,filled"  ] ;
+Gemm_5_squeeze_y_19 [ label="{ { < i0>  0 M } | id=[54] tid=[19]\lGemm_5_squeeze_y_19\lkind=Reshape\lsched epoch=13.\lhw unit=NULL_UNIT\l | { < o0>  0 M } }", shape=record, fillcolor="lightblue2", style="rounded,filled"  ] ;
+Gemm_5_add_20 [ label="{ { < i0>  0 M  | < i1>  1 M } | id=[58] tid=[20]\lGemm_5_add_20\lkind=Add\lNUM_OPS = 1 OPS\llatency = 3 cycles\lOPS/cycle = 0.333333\lsched epoch=14.\lsched unit= PROCESSOR 0\l | { < o0>  0 M } }", shape=record, fillcolor="yellow", style="rounded,filled"  ] ;
+__NN__RETURN__ [ label="{ { < i0>  0 M } | id=[60] tid=[21]\l__NN__RETURN__\lkind=Return\lsched epoch=15.\lsched unit= PROCESSOR 0\l}", shape=record, fillcolor="aliceblue", style="rounded,filled"  ] ;
+Gemm_1_reshape_x_2:o0:s->Gemm_1_conv_4:i0:n [ label="edge id=[6]\ltid=29 30\lbatch: 0(in,L) 0(out,L) 0(mem,L) \l1x1x1x1\lbits=32\lin=out: Float\lGemm_1_reshape_x_2 FLOAT( 1 1 1 1 )\lGemm_1_reshape_x_2 live(0, 2, id=6)\lpool=1[0, 4]=4 B\lnpuRAM5 edge bs=4\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_1_weights_transposed_3:o0:s->Gemm_1_conv_4:i1:n [ label="edge id=[8]\ltid=33 34\lbatch: 0(in,L) 0(mem,L) \l16x1x1x1\lbits=32\lin=out: Float\lGemm_1_weights_transposed_3 FLOAT( 16 1 1 1 )\lGemm_1_weights_transposed_3 live(0, inf, id=4)\lpool=8[1024, 1088]=64 B\loctoFlash edge bs=64\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_1_conv_4:o0:s->Gemm_1_squeeze_y_5:i0:n [ label="edge id=[10]\ltid=42 43\lbatch: 0(out,L) 0(mem,L) \l1x16x1x1\lbits=32\lin=out: Float\lGemm_1_conv_4 FLOAT( 1 16 1 1 )\lGemm_1_conv_4 live(2, 4, id=8)\lpool=1[16, 80]=64 B\lnpuRAM5 edge bs=64\lout bw=64 B\l" ]; 
+Gemm_1_squeeze_y_5:o0:s->Gemm_1_add_6:i0:n [ label="edge id=[14]\ltid=55 56\lbatch: 0(in,L) 0(out,L) 0(mem,L) \l1x16\lbits=32\lin=out: Float\lGemm_1_squeeze_y_5 FLOAT( 1 16 )\lGemm_1_squeeze_y_5 live(2, 4, id=8)\lpool=1[16, 80]=64 B\lnpuRAM5 edge bs=64\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_1_bias:o0:s->Gemm_1_add_6:i1:n [ label="edge id=[16]\ltid=59 60\lbatch: 0(in,L) 0(mem,L) \l16\lbits=32\lin=out: Float\lGemm_1_bias FLOAT( 16 )\lGemm_1_bias live(0, inf, id=3)\lpool=8[1088, 1152]=64 B\loctoFlash edge bs=64\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_1_add_6:o0:s->Relu_2:i0:n [ label="edge id=[18]\ltid=65 66\lbatch: 0(in,L) 0(out,L) 0(mem,L) \l1x16\lbits=32\lin=out: Float\lGemm_1_out_0 FLOAT( 1 16 )\lGemm_1_out_0 live(4, 7, id=9)\lpool=1[80, 144]=64 B\lnpuRAM5 edge bs=64\l context[0](1,0)\lout bw=64 B\l" ]; 
+Gemm_3_reshape_x_9:o0:s->Gemm_3_conv_11:i0:n [ label="edge id=[26]\ltid=93 94\lbatch: 0(in,L) 0(out,L) 0(mem,L) \l1x16x1x1\lbits=32\lin=out: Float\lGemm_3_reshape_x_9 FLOAT( 1 16 1 1 )\lGemm_3_reshape_x_9 live(4, 7, id=9)\lpool=1[80, 144]=64 B\lnpuRAM5 edge bs=64\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_3_weights_transposed_10:o0:s->Gemm_3_conv_11:i1:n [ label="edge id=[28]\ltid=97 98\lbatch: 0(in,L) 0(mem,L) \l16x16x1x1\lbits=32\lin=out: Float\lGemm_3_weights_transposed_10 FLOAT( 16 16 1 1 )\lGemm_3_weights_transposed_10 live(0, inf, id=7)\lpool=8[0, 1024]=1.00 KB\loctoFlash edge bs=1024\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_3_conv_11:o0:s->Gemm_3_squeeze_y_12:i0:n [ label="edge id=[30]\ltid=106 107\lbatch: 0(out,L) 0(mem,L) \l1x16x1x1\lbits=32\lin=out: Float\lGemm_3_conv_11 FLOAT( 1 16 1 1 )\lGemm_3_conv_11 live(7, 9, id=10)\lpool=1[0, 64]=64 B\lnpuRAM5 edge bs=64\lout bw=64 B\l" ]; 
+Gemm_3_squeeze_y_12:o0:s->Gemm_3_add_13:i0:n [ label="edge id=[34]\ltid=119 120\lbatch: 0(in,L) 0(out,L) 0(mem,L) \l1x16\lbits=32\lin=out: Float\lGemm_3_squeeze_y_12 FLOAT( 1 16 )\lGemm_3_squeeze_y_12 live(7, 9, id=10)\lpool=1[0, 64]=64 B\lnpuRAM5 edge bs=64\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_3_bias:o0:s->Gemm_3_add_13:i1:n [ label="edge id=[36]\ltid=123 124\lbatch: 0(in,L) 0(mem,L) \l16\lbits=32\lin=out: Float\lGemm_3_bias FLOAT( 16 )\lGemm_3_bias live(0, inf, id=2)\lpool=8[1152, 1216]=64 B\loctoFlash edge bs=64\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_3_add_13:o0:s->Relu_4:i0:n [ label="edge id=[38]\ltid=129 130\lbatch: 0(in,L) 0(out,L) 0(mem,L) \l1x16\lbits=32\lin=out: Float\lGemm_3_out_0 FLOAT( 1 16 )\lGemm_3_out_0 live(9, 12, id=11)\lpool=1[64, 128]=64 B\lnpuRAM5 edge bs=64\l context[0](1,0)\lout bw=64 B\l" ]; 
+Gemm_5_reshape_x_16:o0:s->Gemm_5_conv_18:i0:n [ label="edge id=[46]\ltid=157 158\lbatch: 0(in,L) 0(out,L) 0(mem,L) \l1x16x1x1\lbits=32\lin=out: Float\lGemm_5_reshape_x_16 FLOAT( 1 16 1 1 )\lGemm_5_reshape_x_16 live(9, 12, id=11)\lpool=1[64, 128]=64 B\lnpuRAM5 edge bs=64\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_5_weights_transposed_17:o0:s->Gemm_5_conv_18:i1:n [ label="edge id=[48]\ltid=161 162\lbatch: 0(in,L) 0(mem,L) \l1x16x1x1\lbits=32\lin=out: Float\lGemm_5_weights_transposed_17 FLOAT( 1 16 1 1 )\lGemm_5_weights_transposed_17 live(0, inf, id=5)\lpool=8[1216, 1280]=64 B\loctoFlash edge bs=64\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_5_conv_18:o0:s->Gemm_5_squeeze_y_19:i0:n [ label="edge id=[50]\ltid=170 171\lbatch: 0(out,L) 0(mem,L) \l1x1x1x1\lbits=32\lin=out: Float\lGemm_5_conv_18 FLOAT( 1 1 1 1 )\lGemm_5_conv_18 live(12, 14, id=12)\lpool=1[128, 132]=4 B\lnpuRAM5 edge bs=4\lout bw=4 B\l" ]; 
+Gemm_5_squeeze_y_19:o0:s->Gemm_5_add_20:i0:n [ label="edge id=[54]\ltid=183 184\lbatch: 0(in,L) 0(out,L) 0(mem,L) \l1x1\lbits=32\lin=out: Float\lGemm_5_squeeze_y_19 FLOAT( 1 1 )\lGemm_5_squeeze_y_19 live(12, 14, id=12)\lpool=1[128, 132]=4 B\lnpuRAM5 edge bs=4\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_5_bias:o0:s->Gemm_5_add_20:i1:n [ label="edge id=[56]\ltid=187 188\lbatch: 0(in,L) 0(mem,L) \l1\lbits=32\lin=out: Float\lGemm_5_bias FLOAT( 1 )\lGemm_5_bias live(0, inf, id=1)\lpool=8[1280, 1284]=4 B\loctoFlash edge bs=4\l context[0](1,0)\lout bw=?\l" ]; 
+Gemm_5_add_20:o0:s->__NN__RETURN__:i0:n [ label="edge id=[58]\ltid=193 194\lbatch: 0(out,L) 0(mem,L) \l1x1\lbits=32\lin=out: Float\lGemm_5_out_0 FLOAT( 1 1 )\lGemm_5_out_0 live(14, 15, id=13)\lpool=1[0, 4]=4 B\lnpuRAM5 edge bs=4\l context[0](1,0)\lout bw=4 B\l" ]; 
+Input_0_out_0:o0:s->Gemm_1_reshape_x_2:i0:n [ label="edge id=[60]\ltid=195 196\lbatch: 1(in) 1(out,L) 1(mem,L) \l1x1\lbits=32\lin=out: Float\lInput_0_out_0 FLOAT( 1 1 )\lInput_0_out_0 live(0, 2, id=6)\lpool=1[0, 4]=4 B\lnpuRAM5 edge bs=4\lout bw=?\l" ]; 
+Relu_2:o0:s->Gemm_3_reshape_x_9:i0:n [ label="edge id=[62]\ltid=197 198\lbatch: 0(out,L) 0(mem,L) \l1x16\lbits=32\lin=out: Float\lRelu_2_out_0 FLOAT( 1 16 )\lRelu_2_out_0 live(4, 7, id=9)\lpool=1[80, 144]=64 B\lnpuRAM5 edge bs=64\lout bw=64 B\l" ]; 
+Relu_4:o0:s->Gemm_5_reshape_x_16:i0:n [ label="edge id=[64]\ltid=199 200\lbatch: 0(out,L) 0(mem,L) \l1x16\lbits=32\lin=out: Float\lRelu_4_out_0 FLOAT( 1 16 )\lRelu_4_out_0 live(9, 12, id=11)\lpool=1[64, 128]=64 B\lnpuRAM5 edge bs=64\lout bw=64 B\l" ]; 
+}

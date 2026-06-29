@@ -1,0 +1,14 @@
+{
+  "toolchain": "STM32CubeIDE",
+  "variant": "Validation",
+  "fromMx": false,
+  "isGenerated": false,
+  "name": "run-3",
+  "createdAt": 1781545213031,
+  "lastModified": 1781546150960,
+  "lastAccessed": 1781546150950,
+  "path": "C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\stm32\\stm32_ai\\kognihome",
+  "board": "STM32N6570-DK",
+  "mcu": "",
+  "type": "BYOM"
+}

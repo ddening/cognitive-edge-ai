@@ -1,0 +1,5 @@
+../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_ll_bus.h:679:22:LL_MEM_EnableClock	8	static
+../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_ll_bus.h:1407:22:LL_AHB4_GRP1_EnableClock	8	static
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/FSBL/Core/Src/main.c:139:6:SystemClock_Config	224	static,ignoring_inline_asm
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/FSBL/Core/Src/main.c:72:5:main	40	static,ignoring_inline_asm
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/FSBL/Core/Src/main.c:565:6:Error_Handler	0	static,ignoring_inline_asm

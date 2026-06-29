@@ -1,0 +1,244 @@
+{
+    "version": "4.0",
+    "environment": {
+        "generated_model": {
+            "model_files": [
+                {
+                    "name": "sine_model_OE_3_3_1.onnx",
+                    "signature": "0x1870d2313d12205e22d27e561fef1851"
+                }
+            ],
+            "name": "network",
+            "generated_time": "2026-06-09T00:43:07+0200"
+        },
+        "tools": [
+            {
+                "name": "ST.EdgeAI.Core",
+                "version": "4.0.1-20581 7ed50de05",
+                "arguments": "analyze --model C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\research_master\\cognitive-edge-ai\\notebooks\\sine_model.tflite --batch-size 10 --mode host --st-neural-art user_profile@C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\stm32\\stm32_ai\\sine_wave\\.ai\\run\\run-1\\.ai\\profile-neural-art.json --name network --verbosity 1 --c-api st-ai --target stm32n6 --workspace C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\stm32\\stm32_ai\\sine_wave\\.ai\\run\\run-1\\.ai\\st_ai_ws --output C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\stm32\\stm32_ai\\sine_wave\\.ai\\run\\run-1\\.ai\\st_ai_output",
+                "environment": [
+                    "STATS_TYPE=STM32CUBEAI-STUDIO"
+                ],
+                "input_model": {
+                    "model_files": [
+                        {
+                            "name": "sine_model.tflite",
+                            "signature": "0x398db35c089760bd4d71f56765566d42"
+                        }
+                    ],
+                    "name": "sine_model",
+                    "type": "tflite",
+                    "size": 1284,
+                    "n_params": 321
+                }
+            }
+        ],
+        "test_name": "",
+        "network_signature": "0xd721aab6ef3b2e2f"
+    },
+    "model_info": {
+        "original_inputs": [
+            {
+                "name": "serving_default_keras_tensor0",
+                "data_format": {
+                    "type": "FLOAT",
+                    "size": 32,
+                    "scale": [],
+                    "zero": [],
+                    "quantizer": "NONE"
+                },
+                "shape": [
+                    1,
+                    1
+                ],
+                "shape_map": [
+                    "BATCH",
+                    "CH"
+                ],
+                "c_shape_map": [
+                    "BATCH",
+                    "CH"
+                ]
+            }
+        ],
+        "original_outputs": [
+            {
+                "name": "gemm_2",
+                "data_format": {
+                    "type": "FLOAT",
+                    "size": 32,
+                    "scale": [],
+                    "zero": [],
+                    "quantizer": "NONE"
+                },
+                "shape": [
+                    1,
+                    1
+                ],
+                "shape_map": [
+                    "BATCH",
+                    "CH"
+                ],
+                "c_shape_map": [
+                    "BATCH",
+                    "CH"
+                ]
+            }
+        ]
+    },
+    "tensors": {
+        "Input_0_out_0": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            },
+            "data_channel_position": "CHLAST",
+            "data_channel_batch": 1,
+            "user_allocated": false
+        },
+        "Gemm_1_out_0": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        },
+        "Gemm_1_weights": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        },
+        "Gemm_1_bias": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        },
+        "Relu_2_out_0": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        },
+        "Gemm_3_out_0": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        },
+        "Gemm_3_weights": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        },
+        "Gemm_3_bias": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        },
+        "Relu_4_out_0": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        },
+        "Gemm_5_out_0": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            },
+            "data_channel_position": "CHFIRST",
+            "data_channel_batch": 1,
+            "user_allocated": false
+        },
+        "Gemm_5_weights": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        },
+        "Gemm_5_bias": {
+            "format": {
+                "params": [
+                    null,
+                    null
+                ],
+                "class": "float32",
+                "type": "FLOAT32"
+            }
+        }
+    },
+    "nodes": {
+        "Gemm_1": {
+            "names": [
+                "FULLY_CONNECTED_0"
+            ]
+        },
+        "Relu_2": {
+            "names": [
+                "__FE_GENERATED__"
+            ]
+        },
+        "Gemm_3": {
+            "names": [
+                "FULLY_CONNECTED_1"
+            ]
+        },
+        "Relu_4": {
+            "names": [
+                "__FE_GENERATED__"
+            ]
+        },
+        "Gemm_5": {
+            "names": [
+                "FULLY_CONNECTED_2"
+            ]
+        }
+    }
+}

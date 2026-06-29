@@ -1,0 +1,890 @@
+Generate Project
+Copying previous project files from C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2 to C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\generate\backup
+Calculating memory footprint...
+Generating project for board STM32N6570-DK...
+Executing process: C:\Users\workstation-uni\AppData\Local\Programs\STM32CubeMX\jre\bin\java.exe -jar C:\Users\workstation-uni\AppData\Local\Programs\STM32CubeMX\STM32CubeMX.exe -q -s
+Executed command: config load "C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\run-2.ioc"
+Executed command: project toolchain "STM32CubeIDE"
+Executed command: set context FSBL EXTMEM_MANAGER
+Executed command: set mode EXTMEM_MANAGER "Activate_EXTMEM"
+Executed command: set mode USART1 "Asynchronous"
+Executed command: set mode XSPIM "Direct"
+Executed command: set mode XSPI1 "octo_mode"
+Executed command: set mode XSPI1 "XSPI1_Port1Octo"
+Executed command: set mode XSPI1 "XSPI1_NCS1_Port1"
+Executed command: set mode XSPI2 "octo_mode"
+Executed command: set mode XSPI2 "XSPI2_Port2Octo"
+Executed command: set mode XSPI2 "XSPI2_NCS1_Port2"
+Executed command: set ip parameters EXTMEM_MANAGER "RefParam_BOOT_enable" "true"
+Executed command: set ip parameters EXTMEM_MANAGER "RefParam_BOOT_selection" "XIP"
+Executed command: set ip parameters EXTMEM_MANAGER "RefParam_XIP_memory" "EXTMEM1"
+Executed command: set ip parameters EXTMEM_MANAGER "RefParam_MEMORY_1_Driver_Selection"  "EXTMEM_NOR_SFDP"
+Executed command: set ip parameters EXTMEM_MANAGER "RefParam_MEMORY_1_Instance" "XSPI2"
+Executed command: set ip parameters EXTMEM_MANAGER "RefParam_MEMORY_1_ConfigType" "EXTMEM_LINK_CONFIG_8LINES"
+Executed command: set ip parameters XSPI2 "FifoThresholdByte" "4"
+Executed command: set ip parameters XSPI2 "MemoryType" "HAL_XSPI_MEMTYPE_MACRONIX"
+Executed command: set ip parameters XSPI2 "MemorySize" "HAL_XSPI_SIZE_1GB"
+Executed command: set ip parameters XSPI2 "DelayHoldQuarterCycle" "HAL_XSPI_DHQC_ENABLE"
+Executed command: clock resolution
+Executed command: updateIpUi XSPI1
+Executed command: updateIpUi XSPI2
+Executed command: config save
+Executed command: set ip parameters CORTEX_M55_S CPU_ICache Enabled
+Executed command: set ip parameters CORTEX_M55_S CPU_DCache Enabled
+Command not executed or already applied: set mode ICACHE DirectMappedCache, error: Error: Command failed: set mode ICACHE DirectMappedCache
+Executed command: project set stackbycontext Appli 0x2000
+Executed command: project set heapbycontext Appli 0x800
+Executed command: set context Appli CACHEAXI
+Executed command: set mode CACHEAXI "Activated"
+Executed command: updateIpUi CACHEAXI
+Executed command: set context Appli RIF
+Executed command: set ip parameters RIF "RISUP.NPU.Privilege" true
+Executed command: updateIpUi RIF
+Executed command: set gpio parameters PE6 GPIO_PuPd GPIO_PULLUP
+Executed command: unset context FSBL USART1
+Executed command: set context Appli USART1
+Command not executed or already applied: switch context Appli USART1, error: Error: Command failed: switch context Appli USART1
+Executed command: set gpio parameters PE6 PinAttribute Appli
+Executed command: set gpio parameters PE5 PinAttribute Appli
+Executed command: set pin PE6 USART1_RX
+Executed command: set pin PE5 USART1_TX
+Executed command: set mode USART1 Asynchronous
+Executed command: config save
+Executed command: set ip parameters USART1 BaudRate 115200
+Executed command: set gpio parameters PE6 GPIO_PuPd GPIO_PULLUP
+C:\Users\workstation-uni\STM32Cube\Repository\STM32Cube_FW_N6_V1.3.0 already exists... Skipping installation...
+Generate project and exit.
+ If stuck here, please check STM32CubeMX opened dialog or Firmware Package.
+Executed command: config save
+Executed command: project toolchainlocation "."
+Executed command: project generate
+Raising memory area ROM from 0x70100400 to 0x70800000 to limit overlap with external memory EXTFLASH
+Adjusting memory area AXISRAM3_4_5_6 for pool npuRAM6 overlap of 458752 bytes
+Adjusting memory area AXISRAM3_4_5_6 for pool npuRAM5 overlap of 458752 bytes
+Adjusting memory area AXISRAM3_4_5_6 for pool npuRAM4 overlap of 458752 bytes
+Adjusting memory area AXISRAM3_4_5_6 for pool npuRAM3 perfect match of 458752 bytes
+Adjusting memory area RAM for pool cpuRAM2 overlap of 1048576 bytes
+Adjusting memory area AXISRAM3_4_5_6 for pool cpuRAM2_npuRAM3_npuRAM4_npuRAM5_npuRAM6 overlap of 458752 bytes
+Copy external flasher file for STM32CubeProgrammer
+Downloading firmware package N6 version 1.3.0...
+C:\Users\workstation-uni\STM32Cube\Repository\STM32Cube_FW_N6_V1.3.0 already exists... Skipping installation...
+FSBL main.c found, patching FSBL...
+Adding init function call to FSBL main.c
+Generating code...
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe generate --model C:\Users\workstation-uni\Documents\GitHub Repos\research_master\cognitive-edge-ai\notebooks\sine_model.tflite --batch-size 10 --mode target --st-neural-art user_profile@C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\profile-neural-art.json --name network --verbosity 1 --c-api st-ai --target stm32n6 --workspace C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_ws --output C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output
+ST Edge AI Core v4.0.1-20581 7ed50de05
+
+WARNING: gemm_0 is not quantized
+WARNING: nl_0_nl is not quantized
+WARNING: gemm_1 is not quantized
+
+WARNING: nl_1_nl is not quantized
+WARNING: gemm_2 is not quantized
+
+ >>>> EXECUTING NEURAL ART COMPILER
+   C:/ST/STEdgeAI/4.0/Utilities/windows/atonn.exe -i "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/.ai/st_ai_output/sine_model_OE_3_3_1.onnx" --json-quant-file "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/.ai/st_ai_output/sine_model_OE_3_3_1_Q.json" -g "network.c" --load-mdesc "C:/ST/STEdgeAI/4.0/Utilities/configs/stm32n6.mdesc" --load-mpool "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/.ai/memory_pool.mpool" --load-cdesc C:/ST/STEdgeAI/4.0/Utilities/configs/cortex-m55.cdesc --save-mpool-file "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/.ai/st_ai_ws/neural_art__network/memory_pool.mpool" --out-dir-prefix "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/.ai/st_ai_ws/neural_art__network/" --network-name "network" --native-float --cache-maintenance --Ocache-opt --enable-virtual-mem-pools --Os --Oauto-sched --enable-epoch-controller --output-info-file "c_info.json" --generate-stai
+
+ <<<< DONE EXECUTING NEURAL ART COMPILER
+
+ >>>> EXECUTING EPOCH_CONTROLLER POST_PROCESSING
+
+ <<<< DONE EXECUTING EPOCH_CONTROLLER POST_PROCESSING
+
+ Exec/report summary (generate)
+ ---------------------------------------------------------------------------------------------------------------------------------------
+ model file         :   C:\Users\workstation-uni\Documents\GitHub Repos\research_master\cognitive-edge-ai\notebooks\sine_model.tflite   
+ type               :   tflite                                                                                                          
+ c_name             :   network                                                                                                         
+ compression        :   lossless                                                                                                        
+ options            :   allocate-inputs, allocate-outputs, use-lite-runtime, use-st-ai                                                  
+ optimization       :   balanced                                                                                                        
+ target/series      :   stm32n6npu                                                                                                      
+ workspace dir      :   C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_ws             
+ output dir         :   C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output         
+ model_fmt          :   float                                                                                                           
+ model_name         :   sine_model                                                                                                      
+ model_hash         :   0x398db35c089760bd4d71f56765566d42                                                                              
+ params #           :   321 items (1.25 KiB)                                                                                            
+ ---------------------------------------------------------------------------------------------------------------------------------------
+ input 1/1          :   'Input_0_out_0', f32(1x1), 4 Bytes, activations                                                                 
+ output 1/1         :   'Gemm_5_out_0', f32(1x1), 4 Bytes, activations                                                                  
+ macc               :   304                                                                                                             
+ weights (ro)       :   1,284 B (1.25 KiB) (1 segment)                                                                                  
+ activations (rw)   :   144 B (144 B) (1 segment) *                                                                                     
+ ram (total)        :   144 B (144 B) = 144 + 0 + 0                                                                                     
+ ---------------------------------------------------------------------------------------------------------------------------------------
+ (*) 'input'/'output' buffers are allocated in the activations buffer
+
+Computing AI RT data/code size (target=stm32n6npu)..
+
+Compilation details
+   ---------------------------------------------------------------------------------
+
+Compiler version: 1.1.3-275
+Compiler arguments:  -i C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\sine_model_OE_3_3_1.onnx --json-quant-file C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\sine_model_OE_3_3_1_Q.json -g network.c --load-mdesc C:\ST\STEdgeAI\4.0\Utilities\configs\stm32n6.mdesc --load-mpool C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\memory_pool.mpool --load-cdesc C:\ST\STEdgeAI\4.0\Utilities\configs\cortex-m55.cdesc --save-mpool-file C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_ws\neural_art__network\memory_pool.mpool --out-dir-prefix C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_ws\neural_art__network/ --network-name network --native-float --cache-maintenance --Ocache-opt --enable-virtual-mem-pools --Os --Oauto-sched --enable-epoch-controller --output-info-file c_info.json --generate-stai
+====================================================================================
+Memory usage information  (input/output buffers are included in activations)
+   ---------------------------------------------------------------------------------
+	flexMEM    [0x34000000 - 0x34000000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+
+	cpuRAM1    [0x34064000 - 0x34064000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	cpuRAM2    [0x34100000 - 0x34200000]:          0  B /      1.000 MB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	npuRAM3    [0x34200000 - 0x34270000]:          0  B /    448.000 kB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	npuRAM4    [0x34270000 - 0x342E0000]:          0  B /    448.000 kB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	npuRAM5    [0x342E0000 - 0x34350000]:        144  B /    448.000 kB  (  0.03 % used) -- weights:          0  B (  0.00 % used)  activations:        144  B (  0.03 % used)
+	npuRAM6    [0x34350000 - 0x343C0000]:          0  B /    448.000 kB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	octoFlash  [0x71000000 - 0x78000000]:      1.254 kB /    112.000 MB  (  0.00 % used) -- weights:      1.254 kB (  0.00 % used)  activations:          0  B (  0.00 % used)
+	hyperRAM   [0x90000000 - 0x92000000]:          0  B /     32.000 MB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+Total:                                             1.395 kB                                  -- weights:      1.254 kB                  activations:        144  B
+====================================================================================
+Used memory ranges
+   ---------------------------------------------------------------------------------
+	npuRAM5    [0x342E0000 - 0x34350000]: 0x342E0000-0x342E0090
+	octoFlash  [0x71000000 - 0x78000000]: 0x71000000-0x71000510
+====================================================================================
+Epochs details
+   ---------------------------------------------------------------------------------
+Total number of epochs                               8
+>> pure software (SW) epochs                         8
+>> hybrid epochs (using both software and hardware)  0
+>> pure hardware (HW or EC) epochs                   0  (implemented in 6 epoch controller blobs/meta epochs)
++----------------------+------+-------------+
+| epoch ID             | Type |   Details   |
++----------------------+------+-------------+
+| <no executed epochs> |  EC  |             |
+
+| epoch_2              |  SW  | Conv(float) |
+| <no executed epochs> |  EC  |             |
+| epoch_4              |  SW  | Add(float)  |
+| epoch_5              |  SW  | Relu(float) |
+| <no executed epochs> |  EC  |             |
+| epoch_7              |  SW  | Conv(float) |
+| <no executed epochs> |  EC  |             |
+| epoch_9              |  SW  | Add(float)  |
+| epoch_10             |  SW  | Relu(float) |
+| <no executed epochs> |  EC  |             |
+| epoch_12             |  SW  | Conv(float) |
+| <no executed epochs> |  EC  |             |
+| epoch_14             |  SW  | Add(float)  |
++----------------------+------+-------------+
+====================================================================================
+
+ Requested memory size by section - "stm32n6npu" target
+ ------------------------------- -------- -------- ------ -----
+ module                              text   rodata   data   bss
+ ------------------------------- -------- -------- ------ -----
+ NetworkRuntime1201_CM55_GCC.a     11,200        0      0     0
+
+ network.o                            972    1,257      0     0
+ network_atonbuf.xSPI2.o                0    1,288      0     0
+ EC Blobs                               0      384      0     0
+ stai_network.o                         0        0      0     0
+ lib (toolchain)*                  12,296    2,262      0     0
+
+ ll atonn runtime                   6,424    6,508      0    13
+ ------------------------------- -------- -------- ------ -----
+ RT total**                        30,892   11,699      0    13
+ ------------------------------- -------- -------- ------ -----
+ weights                                0    1,284      0     0
+
+ activations                            0        0      0   144
+ io                                     0        0      0     0
+ ------------------------------- -------- -------- ------ -----
+ TOTAL                             30,892   12,983      0   157
+ ------------------------------- -------- -------- ------ -----
+
+ *  toolchain objects (libm/libgcc*)
+ ** RT AI runtime objects (kernels+infrastructure)
+  Summary - "stm32n6npu" target
+  --------------------------------------------------
+
+               FLASH (ro)      %*   RAM (rw)      %
+  --------------------------------------------------
+  RT total         42,591   97.1%         13   8.3%
+  --------------------------------------------------
+
+  TOTAL            43,875                157
+  --------------------------------------------------
+  *  rt/total
+ Generated files (9)
+
+ ------------------------------------------------------------------------------------------------------------------------------------
+ C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\sine_model_OE_3_3_1.onnx
+
+ C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\sine_model_OE_3_3_1_Q.json
+ C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\network.c
+ C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\network_atonbuf.xSPI2.c
+ C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\network_c_info.json
+ C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\stai_network.c
+
+ C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\stai_network.h
+ C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\network.h
+ C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\network_ecblobs.h
+
+Creating txt report file C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\network_generate_report.txt
+
+elapsed time (GENERATE): 4.651s
+
+Compiling template bsp_ai.h.hbs...
+Compiling template app_config.h.hbs...
+Compiling template user_init.h.hbs...
+Compiling template user_init.c.hbs...
+Compiling template app_x-cube-ai.h.hbs...
+Compiling template app_x-cube-ai.c.hbs...
+Compiling template npu_init.h.hbs...
+Compiling template npu_init.c.hbs...
+Compiling template npu_cache.h.hbs...
+Compiling template npu_cache.c.hbs...
+Compiling template weights.h.hbs...
+Compiling template weights.c.hbs...
+Removing USART Init from main.c
+Removing static from USART Init in main.c
+Adding include line #include "app_x-cube-ai.h" to main.c
+Adding init function call STM32CubeAI_Studio_AI_Init(); to main.c
+Adding process function call STM32CubeAI_Studio_AI_Process(); to main.c
+Generate project done
+Create.
+
+Opening 'run-2_FSBL'.
+
+16:15:59 **** Build of configuration Release for project run-2_FSBL ****
+
+make -j12 all 
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/STM32_ExtMem_Manager/boot/stm32_boot_xip.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/STM32_ExtMem_Manager/stm32_boot_xip.d" -MT"Middlewares/STM32_ExtMem_Manager/stm32_boot_xip.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_ExtMem_Manager/stm32_boot_xip.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/STM32_ExtMem_Manager/stm32_extmem.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/STM32_ExtMem_Manager/stm32_extmem.d" -MT"Middlewares/STM32_ExtMem_Manager/stm32_extmem.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_ExtMem_Manager/stm32_extmem.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/STM32_ExtMem_Manager/psram/stm32_psram_driver.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/STM32_ExtMem_Manager/stm32_psram_driver.d" -MT"Middlewares/STM32_ExtMem_Manager/stm32_psram_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_ExtMem_Manager/stm32_psram_driver.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/STM32_ExtMem_Manager/sal/stm32_sal_sd.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/STM32_ExtMem_Manager/stm32_sal_sd.d" -MT"Middlewares/STM32_ExtMem_Manager/stm32_sal_sd.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_ExtMem_Manager/stm32_sal_sd.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/STM32_ExtMem_Manager/sal/stm32_sal_xspi.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/STM32_ExtMem_Manager/stm32_sal_xspi.d" -MT"Middlewares/STM32_ExtMem_Manager/stm32_sal_xspi.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_ExtMem_Manager/stm32_sal_xspi.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/STM32_ExtMem_Manager/sdcard/stm32_sdcard_driver.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/STM32_ExtMem_Manager/stm32_sdcard_driver.d" -MT"Middlewares/STM32_ExtMem_Manager/stm32_sdcard_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_ExtMem_Manager/stm32_sdcard_driver.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp/stm32_sfdp_data.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/STM32_ExtMem_Manager/stm32_sfdp_data.d" -MT"Middlewares/STM32_ExtMem_Manager/stm32_sfdp_data.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_ExtMem_Manager/stm32_sfdp_data.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp/stm32_sfdp_driver.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/STM32_ExtMem_Manager/stm32_sfdp_driver.d" -MT"Middlewares/STM32_ExtMem_Manager/stm32_sfdp_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_ExtMem_Manager/stm32_sfdp_driver.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/STM32_ExtMem_Manager/user/stm32_user_driver.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/STM32_ExtMem_Manager/stm32_user_driver.d" -MT"Middlewares/STM32_ExtMem_Manager/stm32_user_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_ExtMem_Manager/stm32_user_driver.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_sdram.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_sdram.d" -MT"Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_sdram.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_sdram.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_cortex.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_dma.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_dma_ex.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_exti.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_gpio.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_pwr.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_pwr_ex.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rcc.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rcc_ex.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_xspi.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_xspi.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_xspi.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_xspi.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/FSBL/Core/Src/system_stm32n6xx_fsbl.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/CMSIS/system_stm32n6xx_fsbl.d" -MT"Drivers/CMSIS/system_stm32n6xx_fsbl.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/CMSIS/system_stm32n6xx_fsbl.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/BSP/STM32N6570-DK/stm32n6570_discovery.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/BSP/STM32N6570-DK/stm32n6570_discovery.d" -MT"Drivers/BSP/STM32N6570-DK/stm32n6570_discovery.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32N6570-DK/stm32n6570_discovery.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/BSP/STM32N6570-DK/stm32n6570_discovery_xspi.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/BSP/STM32N6570-DK/stm32n6570_discovery_xspi.d" -MT"Drivers/BSP/STM32N6570-DK/stm32n6570_discovery_xspi.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/STM32N6570-DK/stm32n6570_discovery_xspi.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/BSP/Components/mx66uw1g45g/mx66uw1g45g.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/BSP/Components/mx66uw1g45g/mx66uw1g45g.d" -MT"Drivers/BSP/Components/mx66uw1g45g/mx66uw1g45g.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/Components/mx66uw1g45g/mx66uw1g45g.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/BSP/Components/aps256xx/aps256xx.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/BSP/Components/aps256xx/aps256xx.d" -MT"Drivers/BSP/Components/aps256xx/aps256xx.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/Components/aps256xx/aps256xx.o"
+
+arm-none-eabi-gcc -mcpu=cortex-m55 -c -x assembler-with-cpp -MMD -MP -MF"Application/User/Startup/startup_stm32n657x0hxq_fsbl.d" -MT"Application/User/Startup/startup_stm32n657x0hxq_fsbl.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Startup/startup_stm32n657x0hxq_fsbl.o" "../Application/User/Startup/startup_stm32n657x0hxq_fsbl.s"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/FSBL/Core/Src/extmem_manager.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/extmem_manager.d" -MT"Application/User/Core/extmem_manager.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/extmem_manager.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/FSBL/Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/main.d" -MT"Application/User/Core/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/main.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/FSBL/Core/Src/stm32n6xx_hal_msp.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/stm32n6xx_hal_msp.d" -MT"Application/User/Core/stm32n6xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/stm32n6xx_hal_msp.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/FSBL/Core/Src/stm32n6xx_it.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/stm32n6xx_it.d" -MT"Application/User/Core/stm32n6xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/stm32n6xx_it.o"
+
+arm-none-eabi-gcc "../Application/User/Core/syscalls.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/syscalls.d" -MT"Application/User/Core/syscalls.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/syscalls.o"
+
+arm-none-eabi-gcc "../Application/User/Core/sysmem.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../../../FSBL/Core/Inc -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Middlewares/ST/STM32_ExtMem_Manager -I../../../Middlewares/ST/STM32_ExtMem_Manager/boot -I../../../Middlewares/ST/STM32_ExtMem_Manager/sal -I../../../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp -I../../../Middlewares/ST/STM32_ExtMem_Manager/psram -I../../../Middlewares/ST/STM32_ExtMem_Manager/sdcard -I../../../Middlewares/ST/STM32_ExtMem_Manager/user -I../../../Drivers/CMSIS/Include -I../../../Drivers/BSP/STM32N6570-DK -I../../../Drivers/BSP/Components/mx66uw1g45g -I../../../Drivers/BSP/Components/aps256xx -I../../../Drivers/STM32N6xx_HAL_Driver/Src -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/sysmem.d" -MT"Application/User/Core/sysmem.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/sysmem.o"
+
+arm-none-eabi-gcc -o "run-2_FSBL.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\FSBL\STM32N657X0HXQ_AXISRAM2_fsbl.ld" --specs=nosys.specs -Wl,-Map="run-2_FSBL.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+
+Finished building target: run-2_FSBL.elf
+
+arm-none-eabi-size  run-2_FSBL.elf 
+
+arm-none-eabi-objdump -h -S run-2_FSBL.elf  > "run-2_FSBL.list"
+
+   text	   data	    bss	    dec	    hex	filename
+
+  35068	     12	   3580	  38660	   9704	run-2_FSBL.elf
+
+arm-none-eabi-objcopy  -O binary run-2_FSBL.elf  "run-2_FSBL.bin"
+
+Finished building: default.size.stdout
+
+Finished building: run-2_FSBL.bin
+
+Finished building: run-2_FSBL.list
+
+
+16:16:02 Build Finished. 0 errors, 0 warnings. (took 3s.71ms)
+
+
+Create.
+
+Opening 'run-2_Appli'.
+
+16:16:10 **** Build of configuration Release for project run-2_Appli ****
+
+make -j12 all 
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiPbIO.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiPbIO.d" -MT"Middlewares/ST/AI/Validation/Src/aiPbIO.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiPbIO.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.d" -MT"Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiPbMemRWServices.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiPbMgr.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiPbMgr.d" -MT"Middlewares/ST/AI/Validation/Src/aiPbMgr.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiPbMgr.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.d" -MT"Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/ai_io_buffers_ATON.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/ai_io_buffers_ATON.d" -MT"Middlewares/ST/AI/Validation/Src/ai_io_buffers_ATON.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/ai_io_buffers_ATON.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/ai_wrapper_ATON_ST_AI.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/ai_wrapper_ATON_ST_AI.d" -MT"Middlewares/ST/AI/Validation/Src/ai_wrapper_ATON_ST_AI.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/ai_wrapper_ATON_ST_AI.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/pb_common.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/pb_common.d" -MT"Middlewares/ST/AI/Validation/Src/pb_common.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/pb_common.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/pb_decode.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/pb_decode.d" -MT"Middlewares/ST/AI/Validation/Src/pb_decode.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/pb_decode.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/pb_encode.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/pb_encode.d" -MT"Middlewares/ST/AI/Validation/Src/pb_encode.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/pb_encode.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/stm32msg.pb.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Validation/Src/stm32msg.pb.d" -MT"Middlewares/ST/AI/Validation/Src/stm32msg.pb.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Validation/Src/stm32msg.pb.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ecloader.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ecloader.d" -MT"Middlewares/ST/AI/Npu/ecloader.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ecloader.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton.d" -MT"Middlewares/ST/AI/Npu/ll_aton.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_cipher.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_cipher.d" -MT"Middlewares/ST/AI/Npu/ll_aton_cipher.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_cipher.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_dbgtrc.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_dbgtrc.d" -MT"Middlewares/ST/AI/Npu/ll_aton_dbgtrc.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_dbgtrc.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_debug.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_debug.d" -MT"Middlewares/ST/AI/Npu/ll_aton_debug.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_debug.o"
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/ai_wrapper_ATON_ST_AI.c: In function '_populate_nn_info':
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/ai_wrapper_ATON_ST_AI.c:455:10: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+
+  455 |   while (aton_buf = npu_get_input_buffers_info(instance, nn_info->n_inputs))
+      |          ^~~~~~~~
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/ai_wrapper_ATON_ST_AI.c:462:10: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+
+  462 |   while (aton_buf = npu_get_output_buffers_info(instance, nn_info->n_outputs))
+      |          ^~~~~~~~
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_lib.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_lib.d" -MT"Middlewares/ST/AI/Npu/ll_aton_lib.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_lib.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_lib_sw_operators.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_lib_sw_operators.d" -MT"Middlewares/ST/AI/Npu/ll_aton_lib_sw_operators.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_lib_sw_operators.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_osal_freertos.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_osal_freertos.d" -MT"Middlewares/ST/AI/Npu/ll_aton_osal_freertos.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_osal_freertos.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_osal_threadx.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_osal_threadx.d" -MT"Middlewares/ST/AI/Npu/ll_aton_osal_threadx.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_osal_threadx.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_osal_zephyr.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_osal_zephyr.d" -MT"Middlewares/ST/AI/Npu/ll_aton_osal_zephyr.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_osal_zephyr.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_profiler.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_profiler.d" -MT"Middlewares/ST/AI/Npu/ll_aton_profiler.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_profiler.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_reloc_callbacks.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_reloc_callbacks.d" -MT"Middlewares/ST/AI/Npu/ll_aton_reloc_callbacks.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_reloc_callbacks.o"
+
+In file included from C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_platform.h:269,
+
+                 from C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_osal.h:24,
+                 from C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton.h:35,
+                 from C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_dbgtrc.c:23:
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_dbgtrc.c: In function 'LL_Dbgtrc_Read_Stalls':
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ATON.h:2305:4: warning: array subscript 0 is outside array bounds of 'volatile uint32_t[0]' {aka 'volatile long unsigned int[]'} [-Warray-bounds=]
+
+ 2305 |   (*((volatile uint32_t *)(uintptr_t)(ADDR)))
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ATON.h:13652:3: note: in expansion of macro 'ATON_GET_REG32'
+
+13652 |   ATON_GET_REG32(ATON_DEBUG_TRACE_LOW_OLINK_STATES_ADDR(UNIT))
+      |   ^~~~~~~~~~~~~~
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_rcompat.h:58:15: note: in expansion of macro 'ATON_DEBUG_TRACE_LOW_OLINK_STATES_GET'
+
+   58 |   (idx == 0 ? ATON_DEBUG_TRACE_LOW_OLINK_STATES_GET(unit) : ATON_DEBUG_TRACE_HIGH_OLINK_STATES_GET(unit))
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_dbgtrc.c:137:24: note: in expansion of macro 'ATON_DEBUG_TRACE_OLINK_STATES_GET'
+
+  137 |     stalls = (uint64_t)ATON_DEBUG_TRACE_OLINK_STATES_GET(id, 0);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1.exe: note: source object is likely at address zero
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ATON.h:2305:4: warning: array subscript 0 is outside array bounds of 'volatile uint32_t[0]' {aka 'volatile long unsigned int[]'} [-Warray-bounds=]
+
+ 2305 |   (*((volatile uint32_t *)(uintptr_t)(ADDR)))
+
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ATON.h:13562:3: note: in expansion of macro 'ATON_GET_REG32'
+
+13562 |   ATON_GET_REG32(ATON_DEBUG_TRACE_LOW_ILINK_STATES_ADDR(UNIT))
+
+      |   ^~~~~~~~~~~~~~
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_rcompat.h:56:15: note: in expansion of macro 'ATON_DEBUG_TRACE_LOW_ILINK_STATES_GET'
+
+   56 |   (idx == 0 ? ATON_DEBUG_TRACE_LOW_ILINK_STATES_GET(unit) : ATON_DEBUG_TRACE_HIGH_ILINK_STATES_GET(unit))
+
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_dbgtrc.c:131:24: note: in expansion of macro 'ATON_DEBUG_TRACE_ILINK_STATES_GET'
+
+  131 |     stalls = (uint64_t)ATON_DEBUG_TRACE_ILINK_STATES_GET(id, 0);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1.exe: note: source object is likely at address zero
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_reloc_network.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_reloc_network.d" -MT"Middlewares/ST/AI/Npu/ll_aton_reloc_network.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_reloc_network.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_rt_main.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_rt_main.d" -MT"Middlewares/ST/AI/Npu/ll_aton_rt_main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_rt_main.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_runtime.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_runtime.d" -MT"Middlewares/ST/AI/Npu/ll_aton_runtime.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_runtime.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_stai_internal.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_stai_internal.d" -MT"Middlewares/ST/AI/Npu/ll_aton_stai_internal.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_stai_internal.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_util.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_aton_util.d" -MT"Middlewares/ST/AI/Npu/ll_aton_util.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_aton_util.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_sw_float.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_sw_float.d" -MT"Middlewares/ST/AI/Npu/ll_sw_float.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_sw_float.o"
+
+In file included from C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_profiler.c:26:
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_profiler.c: In function 'LL_ATON_LIB_ConvInteger':
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_profiler.c:209:31: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+  209 |       LL_ATON_PROFILER_PRINTF("%s k=%d %d scale=%g\n", conv_name, k, maxmax_k, (double)kern->scale[k]);
+
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~                ~~~~~~~~
+      |                                                                      |
+      |                                                                      int32_t {aka long int}
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_util.h:43:46: note: in definition of macro 'LL_ATON_PROFILER_PRINTF'
+
+   43 | #define LL_ATON_PROFILER_PRINTF(...)  printf(__VA_ARGS__)
+
+      |                                              ^~~~~~~~~~~
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_profiler.c:209:41: note: format string is defined here
+
+  209 |       LL_ATON_PROFILER_PRINTF("%s k=%d %d scale=%g\n", conv_name, k, maxmax_k, (double)kern->scale[k]);
+      |                                        ~^
+
+      |                                         |
+      |                                         int
+      |                                        %ld
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_profiler.c:285:33: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t' {aka 'long int'} [-Wformat=]
+
+  285 |     LL_ATON_PROFILER_FPRINTF(f, "%s %d\n", conv_name, maxmax); // log((float)maxmax) / log(2.0));
+      |                                 ^~~~~~~~~             ~~~~~~
+
+      |                                                       |
+      |                                                       int32_t {aka long int}
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_util.h:44:47: note: in definition of macro 'LL_ATON_PROFILER_FPRINTF'
+
+   44 | #define LL_ATON_PROFILER_FPRINTF(...) fprintf(__VA_ARGS__)
+      |                                               ^~~~~~~~~~~
+
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_aton_profiler.c:285:38: note: format string is defined here
+
+  285 |     LL_ATON_PROFILER_FPRINTF(f, "%s %d\n", conv_name, maxmax); // log((float)maxmax) / log(2.0));
+      |                                     ~^
+
+      |                                      |
+
+      |                                      int
+      |                                     %ld
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/ll_sw_integer.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/ll_sw_integer.d" -MT"Middlewares/ST/AI/Npu/ll_sw_integer.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/ll_sw_integer.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Npu/mcu_cache.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Npu/mcu_cache.d" -MT"Middlewares/ST/AI/Npu/mcu_cache.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Npu/mcu_cache.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.d" -MT"Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/aiTestHelper_ST_AI.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Misc/Src/aiTestUtility.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/aiTestUtility.d" -MT"Middlewares/ST/AI/Misc/Src/aiTestUtility.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/aiTestUtility.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Misc/Src/ai_device_adaptor.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/ai_device_adaptor.d" -MT"Middlewares/ST/AI/Misc/Src/ai_device_adaptor.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/ai_device_adaptor.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Misc/Src/lc_print.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/lc_print.d" -MT"Middlewares/ST/AI/Misc/Src/lc_print.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/lc_print.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Misc/Src/syscalls.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Middlewares/ST/AI/Misc/Src/syscalls.d" -MT"Middlewares/ST/AI/Misc/Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/ST/AI/Misc/Src/syscalls.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_cacheaxi.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cacheaxi.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cacheaxi.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cacheaxi.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_cortex.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_dma.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_dma_ex.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_exti.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_gpio.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_pwr.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_pwr_ex.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rcc.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rcc_ex.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rif.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rif.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rif.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rif.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_uart.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_uart_ex.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart_ex.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/Core/Src/system_stm32n6xx_s.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/CMSIS/system_stm32n6xx_s.d" -MT"Drivers/CMSIS/system_stm32n6xx_s.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/CMSIS/system_stm32n6xx_s.o"
+
+arm-none-eabi-gcc -mcpu=cortex-m55 -c -x assembler-with-cpp -MMD -MP -MF"Application/User/Startup/startup_stm32n657x0hxq.d" -MT"Application/User/Startup/startup_stm32n657x0hxq.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Startup/startup_stm32n657x0hxq.o" "../Application/User/Startup/startup_stm32n657x0hxq.s"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/main.d" -MT"Application/User/Core/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/main.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/Core/Src/secure_nsc.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/secure_nsc.d" -MT"Application/User/Core/secure_nsc.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/secure_nsc.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/Core/Src/stm32n6xx_hal_msp.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/stm32n6xx_hal_msp.d" -MT"Application/User/Core/stm32n6xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/stm32n6xx_hal_msp.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/Core/Src/stm32n6xx_it.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/stm32n6xx_it.d" -MT"Application/User/Core/stm32n6xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/stm32n6xx_it.o"
+
+arm-none-eabi-gcc "../Application/User/Core/syscalls.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/syscalls.d" -MT"Application/User/Core/syscalls.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/syscalls.o"
+
+arm-none-eabi-gcc "../Application/User/Core/sysmem.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Application/User/Core/sysmem.d" -MT"Application/User/Core/sysmem.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Application/User/Core/sysmem.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/AI/App/app_x-cube-ai.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Appli/AI/App/app_x-cube-ai.d" -MT"Appli/AI/App/app_x-cube-ai.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Appli/AI/App/app_x-cube-ai.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/AI/App/network.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Appli/AI/App/network.d" -MT"Appli/AI/App/network.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Appli/AI/App/network.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/AI/App/network_atonbuf.xSPI2.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Appli/AI/App/network_atonbuf.xSPI2.d" -MT"Appli/AI/App/network_atonbuf.xSPI2.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Appli/AI/App/network_atonbuf.xSPI2.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/AI/App/network_weights.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Appli/AI/App/network_weights.d" -MT"Appli/AI/App/network_weights.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Appli/AI/App/network_weights.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/AI/App/npu_cache.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Appli/AI/App/npu_cache.d" -MT"Appli/AI/App/npu_cache.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Appli/AI/App/npu_cache.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/AI/App/npu_init.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Appli/AI/App/npu_init.d" -MT"Appli/AI/App/npu_init.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Appli/AI/App/npu_init.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/AI/App/stai_network.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Appli/AI/App/stai_network.d" -MT"Appli/AI/App/stai_network.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Appli/AI/App/stai_network.o"
+
+arm-none-eabi-gcc "C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Appli/AI/App/user_init.c" -mcpu=cortex-m55 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32N657xx -DHAVE_NETWORK_INFO -DLL_ATON_DUMP_DEBUG_API -DLL_ATON_PLATFORM=LL_ATON_PLAT_STM32N6 -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_ASYNC -DLL_ATON_SW_FALLBACK -DLL_ATON_EB_DBG_INFO -DLL_ATON_DBG_BUFFER_INFO_EXCLUDED=1 -DATON_STAI_API -c -I../../../Appli/Core/Inc -I../../../Secure_nsclib -I../../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../../Drivers/CMSIS/Include -I../../../Middlewares/ST/AI/Npu -I../../../Middlewares/ST/AI/Inc -I../../../Middlewares/ST/AI/Misc/Inc -I../../../Middlewares/ST/AI/Validation/Inc -I../../../Middlewares/ST/AI/Misc/Src -I../../../Middlewares/ST/AI/Validation/Src -I../../../Appli/AI/App -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Appli/AI/App/user_init.d" -MT"Appli/AI/App/user_init.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Appli/AI/App/user_init.o"
+
+arm-none-eabi-gcc -o "run-2_Appli.elf" @"objects.list"  -l:NetworkRuntime1201_CM55_GCC.a -mcpu=cortex-m55 -T"C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\Appli\STM32N657X0HXQ_ROMxspi2.ld" --specs=nosys.specs -Wl,-Map="run-2_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o -L../../../Middlewares/ST/AI/Lib/NetworkRuntime1201_CM55_GCC.a --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+
+C:/ST/STM32CubeIDE_2.1.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe:C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\Appli\STM32N657X0HXQ_ROMxspi2.ld:77: warning: memory region `AXISRAM2' not declared
+
+C:/ST/STM32CubeIDE_2.1.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe:C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\Appli\STM32N657X0HXQ_ROMxspi2.ld:84: warning: memory region `AXISRAM3' not declared
+
+C:/ST/STM32CubeIDE_2.1.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe:C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\Appli\STM32N657X0HXQ_ROMxspi2.ld:91: warning: memory region `AXISRAM4' not declared
+C:/ST/STM32CubeIDE_2.1.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe:C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\Appli\STM32N657X0HXQ_ROMxspi2.ld:98: warning: memory region `AXISRAM5' not declared
+
+C:/ST/STM32CubeIDE_2.1.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe:C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\Appli\STM32N657X0HXQ_ROMxspi2.ld:105: warning: memory region `AXISRAM6' not declared
+
+Finished building target: run-2_Appli.elf
+
+arm-none-eabi-size  run-2_Appli.elf 
+
+arm-none-eabi-objdump -h -S run-2_Appli.elf  > "run-2_Appli.list"
+
+   text	   data	    bss	    dec	    hex	filename
+
+  93160	    228	  13484	 106872	  1a178	run-2_Appli.elf
+
+arm-none-eabi-objcopy  -O binary run-2_Appli.elf  "run-2_Appli.bin"
+
+Finished building: default.size.stdout
+
+Finished building: run-2_Appli.bin
+
+Finished building: run-2_Appli.list
+
+
+16:16:16 Build Finished. 0 errors, 11 warnings. (took 6s.905ms)
+
+
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.22.0                  
+
+      -------------------------------------------------------------------
+
+
+ST-LINK SN  : 004F00283233511439363634
+ST-LINK FW  : V3J17M10
+
+Board       : STM32N6570-DK
+
+Voltage     : 3.27V
+
+SWD freq    : 8000 KHz
+
+Connect mode: Under Reset
+Reset mode  : Hardware reset
+
+Device ID   : 0x486
+
+Revision ID : Rev Z
+
+Device name : ST32N657
+Device type : MCU
+
+Device CPU  : Cortex-M55
+BL Version  : --
+
+
+Opening and parsing file: run-2_Appli.elf
+
+
+Memory Programming ...
+  File          : run-2_Appli.elf
+
+  Size          : 91.46 KB 
+
+  Address       : 0x34000000
+
+
+Erasing memory corresponding to segment 0:
+Erasing memory corresponding to segment 1:
+
+Erasing external memory sectors [16 17]
+
+Download in Progress:
+
+
+
+File download complete
+Time elapsed during download operation: 00:00:00.906
+
+
+
+STMicroelectronics ST-LINK GDB server. Version 7.13.0
+Copyright (c) 2026, STMicroelectronics. All rights reserved.
+
+Starting server with the following options:
+        Persistent Mode            : Disabled
+        Logging Level              : 1
+        Listen Port Number         : 58463
+        Status Refresh Delay       : 15s
+        Verbose Mode               : Disabled
+        SWD Debug                  : Enabled
+
+Waiting for debugger connection...
+
+GNU gdb (GNU Tools for STM32 14.3.rel1.20251027-0700) 15.2.90.20241229-git
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "--host=x86_64-w64-mingw32 --target=arm-none-eabi".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+
+Reading symbols from C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\FSBL\Release\run-2_FSBL.elf...
+(No debugging symbols found in C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\FSBL\Release\run-2_FSBL.elf)
+
+Debugger connected
+
+Waiting for debugger connection...
+
+Remote debugging using :58463
+0x1800350e in ?? ()
+
+STM32 Successfully comple
+ted reset operation (System reset)
+
+Loading section .isr_vector, size 0x34c lma 0x34180400
+Loading section .text, size 0x8544 lma 0x3418074c
+Loading section .rodata, size 0x44 lma 0x34188c90
+Loading section .init_array, size 0x4 lma 0x34188cd4
+Loading section .fini_array, size 0x4 lma 0x34188cd8
+Loading section .data, size 0xc lma 0x34188cdc
+Loading section .gnu.sgstubs, size 0x20 lma 0x34188d00
+Start address 0x34180e48, load size 35080
+Transfer rate: 129 KB/sec, 3897 bytes/write.
+Detaching from program: C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\STM32CubeIDE\FSBL\Release\run-2_FSBL.elf, Remote target
+Ending remote debugging.
+[Inferior 1 (Remote target) detached]
+
+Flashing completed
+Device is ready on port COM4
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe validate --model C:\Users\workstation-uni\Documents\GitHub Repos\research_master\cognitive-edge-ai\notebooks\sine_model.tflite --batch-size 10 --mode target --st-neural-art user_profile@C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\profile-neural-art.json --name network --verbosity 1 --c-api st-ai --target stm32n6 --workspace C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_ws --output C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output --desc serial:COM4:115200 --save-csv
+ST Edge AI Core v4.0.1-20581 7ed50de05
+
+Setting validation data...
+ generating random data, size=10, seed=42, range=(0, 1)
+
+   I[1]: (10, 1, 1, 1)/float32, min/max=[0.058084, 0.950714], mean/std=[0.520137, 0.299656]
+ no output/reference samples are provided
+
+Creating c (debug) info json file C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\network_c_info_valid.json
+
+ Exec/report summary (validate)
+ ---------------------------------------------------------------------------------------------------------------------------------------
+ model file         :   C:\Users\workstation-uni\Documents\GitHub Repos\research_master\cognitive-edge-ai\notebooks\sine_model.tflite   
+ type               :   tflite                                                                                                          
+ c_name             :   network                                                                                                         
+ compression        :   lossless                                                                                                        
+ options            :   allocate-inputs, allocate-outputs, use-lite-runtime, use-st-ai                                                  
+ optimization       :   balanced                                                                                                        
+ target/series      :   stm32n6npu                                                                                                      
+ workspace dir      :   C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_ws             
+ output dir         :   C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output         
+ model_fmt          :   float                                                                                                           
+ model_name         :   sine_model                                                                                                      
+ model_hash         :   0x398db35c089760bd4d71f56765566d42                                                                              
+ params #           :   321 items (1.25 KiB)                                                                                            
+ ---------------------------------------------------------------------------------------------------------------------------------------
+ input 1/1          :   'serving_default_keras_tensor0', f32(1x1), 4 Bytes, activations                                                 
+ output 1/1         :   'gemm_2', f32(1x1), 4 Bytes, activations                                                                        
+ macc               :   353                                                                                                             
+ weights (ro)       :   1,288 B (1.26 KiB) (1 segment) / +4(+0.3%) vs float model                                                       
+ activations (rw)   :   136 B (136 B) (1 segment) *                                                                                     
+ ram (total)        :   136 B (136 B) = 136 + 0 + 0                                                                                     
+ ---------------------------------------------------------------------------------------------------------------------------------------
+ (*) 'input'/'output' buffers are allocated in the activations buffer
+
+Running the TFlite model...
+
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Running the ST.AI c-model (AI RUNNER)...(name=network, mode=TARGET)
+
+ Proto-buffer driver v2.1 (msg v3.2) (Serial driver v1.0 - COM4:115200) ['network']
+
+  Summary 'network' - ['network']
+  ----------------------------------------------------------------------------------------------------------------------------------------
+  I[1/1] 'Input_0_out_0'   :   f32[1,1], 4 Bytes, activations
+  O[1/1] 'Gemm_5_out_0'    :   f32[1,1], 4 Bytes, activations
+
+  n_nodes                  :   14
+  compile_datetime         :   Jun 15 2026 16:16:11
+  ----------------------------------------------------------------------------------------------------------------------------------------
+  protocol                 :   Proto-buffer driver v2.1 (msg v3.2) (Serial driver v1.0 - COM4:115200)
+
+  tools                    :   ST Neural ART (st-ai api) v1.1.3
+  runtime lib              :   atonn-v1.1.3-275-g6770925d (optimized SW lib v1.1.3-71120109 GCC)
+  capabilities             :   IO_ONLY, PER_LAYER, PER_LAYER_WITH_DATA
+  device.desc              :   stm32 family - 0x486 - STM32N6xx @800/400MHz
+  device.attrs             :   fpu,core_icache,core_dcache,npu_cache=1,mcu_freq=800MHz,noc_freq=400MHz,npu_freq=1000MHz,nic_freq=900MHz
+
+  ----------------------------------------------------------------------------------------------------------------------------------------
+ Warning: C-network signature checking is skipped on ST Neural-ART NPU
+
+  ST.AI Profiling results v2.0 - "network"
+  ----------------------------------------------------------------------------
+
+  nb sample(s)                   :   10
+  duration                       :   0.061 ms by sample (0.055/0.107/0.015)
+  CPU cycles                     :   [2,713 11,253 34,946]
+  network initialize time (ms)   :   0.000
+  ----------------------------------------------------------------------------
+
+   Inference time per node
+
+   --------------------------------------------------------------------------------------------------------------
+   c_id    m_id   type                 dur (ms)        %     cumul  CPU cycles                   name
+   --------------------------------------------------------------------------------------------------------------
+   0       -      epoch (EC)              0.004    6.83%     6.83%  [    863   1,949     527 ]   EpochBlock_1
+
+   1       -      epoch (SW)              0.007   12.10%    18.93%  [     65      52   5,804 ]   EpochBlock_2
+   2       -      epoch (EC)              0.003    4.82%    23.75%  [    266   1,786     305 ]   EpochBlock_3
+   3       -      epoch (SW)              0.006   10.57%    34.32%  [     65      52   5,053 ]   EpochBlock_4
+   4       -      epoch (SW)              0.003    5.23%    39.55%  [     65      52   2,442 ]   EpochBlock_5
+
+   5       -      epoch (EC)              0.003    4.59%    44.15%  [    266   1,676     305 ]   EpochBlock_6
+   6       -      epoch (SW)              0.008   12.42%    56.57%  [     65      52   5,960 ]   EpochBlock_7
+   7       -      epoch (EC)              0.003    4.73%    61.30%  [    266   1,744     305 ]   EpochBlock_8
+   8       -      epoch (SW)              0.005    8.60%    69.91%  [     65      52   4,091 ]   EpochBlock_9
+   9       -      epoch (SW)              0.002    3.81%    73.72%  [     65      52   1,745 ]   EpochBlock_10
+   10      -      epoch (EC)              0.003    4.87%    78.59%  [    266   1,812     305 ]   EpochBlock_11
+
+   11      -      epoch (SW)              0.005    8.13%    86.72%  [     65      52   3,862 ]   EpochBlock_12
+   12      -      epoch (EC)              0.003    4.99%    91.71%  [    266   1,870     305 ]   EpochBlock_13
+   13      -      epoch (SW)              0.005    8.29%   100.00%  [     65      52   3,937 ]   EpochBlock_14
+   --------------------------------------------------------------------------------------------------------------
+   total                                  0.061                     [  2,713  11,253  34,946 ]
+
+                                 16351.46 inf/s                     [   5.5%   23.0%   71.4% ]
+   --------------------------------------------------------------------------------------------------------------
+   HW: 23.0%, SW: 68.3%, SW ctrl: 8.7%
+
+   Statistic per tensor
+   ------------------------------------------------------------------------------------
+   tensor   #    type[shape]:size       min     max     mean      std  name
+   ------------------------------------------------------------------------------------
+
+   I.0      10   f32[1,1]:4           0.058   0.951    0.520    0.300  Input_0_out_0
+   O.0      10   f32[1,1]:4           0.090   0.815    0.471    0.258  Gemm_5_out_0
+   ------------------------------------------------------------------------------------
+
+Saving validation data...
+
+ output directory: C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output
+
+ creating C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\network_val_io.npz
+
+ m_outputs_1: (10, 1)/float32, min/max=[0.090219, 0.815014], mean/std=[0.470653, 0.258082], gemm_2
+
+ c_outputs_1: (10, 1, 1, 1)/float32, min/max=[0.090219, 0.815015], mean/std=[0.470653, 0.258082], gemm_2
+
+Computing the metrics...
+
+ Cross accuracy report #1 (reference vs C-model)
+
+ ----------------------------------------------------------------------------------------------------
+ notes: - the output of the reference model is used as ground truth/reference value
+        - 10 samples (1 items per sample)
+  acc=n.a. rmse=0.000000224 mae=0.000000197 l2r=0.000000417 mean=0.000000 std=0.000000 snr=127.597952 nse=1.000000 cos=1.000000
+
+ Evaluation report (summary)
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ Output       acc    rmse          mae           l2r           mean       std        snr          nse        cos        tensor
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------
+ X-cross #1   n.a.   0.000000224   0.000000197   0.000000417   0.000000   0.000000   127.597952   1.000000   1.000000   'gemm_2', 10 x f32(1x1), m_id=[2]
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  acc  : Accuracy (class, axis=-1)
+  rmse : Root Mean Squared Error
+  mae  : Mean Absolute Error
+
+  l2r  : L2 relative error
+  mean : Mean error
+  std  : Standard deviation error
+  snr  : Signal-to-Noise Ratio (SNR), bigger is better
+
+  nse  : Nash-Sutcliffe efficiency criteria, bigger is better, best=1, range=(-inf, 1]
+  cos  : COsine Similarity, bigger is better, best=1, range=(0, 1]
+
+Creating txt report file C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\sine_wave\.ai\run\run-2\.ai\st_ai_output\network_validate_report.txt
+
+elapsed time (VALIDATE): 28.100s
+

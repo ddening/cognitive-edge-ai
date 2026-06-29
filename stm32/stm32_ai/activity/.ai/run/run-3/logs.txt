@@ -1,0 +1,9 @@
+>>> C:\ST\STEdgeAI\4.0\Utilities\windows\stedgeai.exe analyze --model C:\Users\workstation-uni\Documents\GitHub Repos\research_master\cognitive-edge-ai\models\model.onnx --batch-size 10 --mode host --name network --verbosity 1 --c-api st-ai --optimization balanced --target stm32n6 --memory-pool C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\kognihome\.ai\run\run-3\.ai\mempools.json --workspace C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\kognihome\.ai\run\run-3\.ai\st_ai_ws --output C:\Users\workstation-uni\Documents\GitHub Repos\stm32\stm32_ai\kognihome\.ai\run\run-3\.ai\st_ai_output
+ST Edge AI Core v4.0.1-20581 7ed50de05
+
+NOT IMPLEMENTED: 'classlabels_strings' not supported for code generation. Use 'classlabels_int64s' instead.
+
+Run failed: Error: analyze error: NOT IMPLEMENTED: 'classlabels_strings' not supported for code generation. Use 'classlabels_int64s' instead.. Please check the report for more details. Output: ST Edge AI Core v4.0.1-20581 7ed50de05
+PASS:   0%|          | 0/171 [00:00<?, ?it/s]                                             
+NOT IMPLEMENTED: 'classlabels_strings' not supported for code generation. Use 'classlabels_int64s' instead.
+ 

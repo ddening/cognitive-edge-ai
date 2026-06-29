@@ -1,0 +1,19 @@
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:854:17:_get_node_type	5
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:191:13:_is_ll_buffer_valid	3
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:237:13:encode_buffer_to_tensor_desc	1
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:1069:6:aiPbCmdSysInfo	1
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:532:29:aiExecCtx	10
+../../../Middlewares/ST/AI/Npu/ll_aton_NN_interface.h:504:32:LL_Buffer_addr_start	2
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:258:13:fill_tensor_desc_msg	7
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:296:13:encode_ll_buffer_to_tensor_desc	2
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:566:13:print_ll_io_buffer	5
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:475:13:send_ai_io_tensor.constprop.isra	2
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:154:6:_print_debug	5
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:1115:6:aiPbCmdNNInfo	13
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:1182:6:aiPbCmdNNRun	14
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:678:9:_find_cdt_ll_buffers	15
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:721:6:_log_counters	23
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:913:6:npu_dump_tensors_cb	7
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:1329:5:aiValidationInit	1
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:1343:5:aiValidationProcess	8
+C:/Users/workstation-uni/Documents/GitHub Repos/stm32/stm32_ai/sine_wave/.ai/run/run-2/Middlewares/ST/AI/Validation/Src/aiValidation_ATON_ST_AI.c:1397:6:aiValidationDeInit	3

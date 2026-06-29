@@ -1,0 +1,223 @@
+{
+  "aton_execution_time": [
+    {
+      "c_layer_name": "EpochBlock_1",
+      "counters": [
+        863,
+        1949,
+        527
+      ],
+      "cycles": 3340,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.004175124946050346,
+      "percentage": 6.826938142687516
+    },
+    {
+      "c_layer_name": "EpochBlock_2",
+      "counters": [
+        65,
+        52,
+        5804
+      ],
+      "cycles": 5922,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.007402500091120601,
+      "percentage": 12.104167151003784
+    },
+    {
+      "c_layer_name": "EpochBlock_3",
+      "counters": [
+        266,
+        1786,
+        305
+      ],
+      "cycles": 2357,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.0029467500047758222,
+      "percentage": 4.818365980543782
+    },
+    {
+      "c_layer_name": "EpochBlock_4",
+      "counters": [
+        65,
+        52,
+        5053
+      ],
+      "cycles": 5171,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.006464000139385462,
+      "percentage": 10.569582869047842
+    },
+    {
+      "c_layer_name": "EpochBlock_5",
+      "counters": [
+        65,
+        52,
+        2442
+      ],
+      "cycles": 2560,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.0032006250228732826,
+      "percentage": 5.233488657570401
+    },
+    {
+      "c_layer_name": "EpochBlock_6",
+      "counters": [
+        266,
+        1676,
+        305
+      ],
+      "cycles": 2248,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.0028101249830797316,
+      "percentage": 4.594964146128046
+    },
+    {
+      "c_layer_name": "EpochBlock_7",
+      "counters": [
+        65,
+        52,
+        5960
+      ],
+      "cycles": 6078,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.0075981248635798694,
+      "percentage": 12.424042181814574
+    },
+    {
+      "c_layer_name": "EpochBlock_8",
+      "counters": [
+        266,
+        1744,
+        305
+      ],
+      "cycles": 2315,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.002894624997861683,
+      "percentage": 4.733133992881563
+    },
+    {
+      "c_layer_name": "EpochBlock_9",
+      "counters": [
+        65,
+        52,
+        4091
+      ],
+      "cycles": 4209,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.005261499853804708,
+      "percentage": 8.603319542248498
+    },
+    {
+      "c_layer_name": "EpochBlock_10",
+      "counters": [
+        65,
+        52,
+        1745
+      ],
+      "cycles": 1863,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.0023288749624043705,
+      "percentage": 3.808050181930204
+    },
+    {
+      "c_layer_name": "EpochBlock_11",
+      "counters": [
+        266,
+        1812,
+        305
+      ],
+      "cycles": 2383,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.002979124989360571,
+      "percentage": 4.871303801563876
+    },
+    {
+      "c_layer_name": "EpochBlock_12",
+      "counters": [
+        65,
+        52,
+        3862
+      ],
+      "cycles": 3979,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.004974500043317676,
+      "percentage": 8.13403299909689
+    },
+    {
+      "c_layer_name": "EpochBlock_13",
+      "counters": [
+        266,
+        1870,
+        305
+      ],
+      "cycles": 2441,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.00305224999319762,
+      "percentage": 4.99087384661165
+    },
+    {
+      "c_layer_name": "EpochBlock_14",
+      "counters": [
+        65,
+        52,
+        3937
+      ],
+      "cycles": 4054,
+      "cycles_by_macc": 0,
+      "duration_ms": 0.005068499920889735,
+      "percentage": 8.287736506871365
+    }
+  ],
+  "environment": {
+    "generated_model": {
+      "generated_time": "2026-06-15T16:16:30+0200",
+      "name": "network"
+    },
+    "network_signature": "0x3c5af3ea2be2113d",
+    "target": "stm32 family - 0x486 - STM32N6xx @800/400MHz",
+    "test_name": "",
+    "tools": [
+      {
+        "arguments": "validate --model C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\research_master\\cognitive-edge-ai\\notebooks\\sine_model.tflite --batch-size 10 --mode target --st-neural-art user_profile@C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\stm32\\stm32_ai\\sine_wave\\.ai\\run\\run-2\\.ai\\profile-neural-art.json --name network --verbosity 1 --c-api st-ai --target stm32n6 --workspace C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\stm32\\stm32_ai\\sine_wave\\.ai\\run\\run-2\\.ai\\st_ai_ws --output C:\\Users\\workstation-uni\\Documents\\GitHub Repos\\stm32\\stm32_ai\\sine_wave\\.ai\\run\\run-2\\.ai\\st_ai_output --desc serial:COM4:115200 --save-csv",
+        "environment": [
+          "STATS_TYPE=STM32CUBEAI-STUDIO"
+        ],
+        "input_model": {
+          "model_files": [
+            {
+              "name": "sine_model.tflite",
+              "signature": "0x398db35c089760bd4d71f56765566d42"
+            }
+          ],
+          "n_params": 321,
+          "name": "sine_model",
+          "size": 1284,
+          "type": "tflite"
+        },
+        "name": "ST.EdgeAI.Core",
+        "version": "4.0.1-20581 7ed50de05"
+      }
+    ]
+  },
+  "json_schema_version": "2.0",
+  "validation": {
+    "device": "VALIDATION_TARGET",
+    "val_error": 4.169679073129373e-07,
+    "val_error_desc": "x-cross (l2r) #1",
+    "val_metrics": [
+      {
+        "acc": "n.a.",
+        "cos": 1.0,
+        "desc": "X-cross #1",
+        "l2r": 4.169679073129373e-07,
+        "mae": 1.9669532491661812e-07,
+        "mean": 5.960464477539063e-08,
+        "nse": 0.9999999999993231,
+        "rmse": 2.2381524900083605e-07,
+        "snr": 127.59795188903809,
+        "std": 2.2740211136351718e-07
+      }
+    ]
+  }
+}

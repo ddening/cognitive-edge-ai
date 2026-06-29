@@ -1,0 +1,54 @@
+digraph G {
+graph [ fontsize=11 ];
+node [ fontsize=11 ];
+edge [ fontsize=10 ];
+rankdir=BU
+ranksep=1.5
+nodesep=1
+splines=spline
+compound=true
+Graphinfo [ label="" shape=plaintext, style=rounded, color=black, fontname="Arial-Bold" ];
+Gemm_5_bias [ label="{ { <i0> 0} |  [56]\lGemm_5_bias\l(bytes=4 , 0.31% of total)\l\l -0.270581 | { <o0> 0} }", shape=record, color=black, style=rounded  ] ;
+Gemm_3_bias [ label="{ { <i0> 0} |  [36]\lGemm_3_bias\l(bytes=64 , 5% of total)\l\l -0.516567 0.38756 -0.344654 0.396643 ... | { <o0> 0} }", shape=record, color=black, style=rounded  ] ;
+Gemm_1_bias [ label="{ { <i0> 0} |  [16]\lGemm_1_bias\l(bytes=64 , 5% of total)\l\l -0.127058 0.679311 0 -0.00851497 ... | { <o0> 0} }", shape=record, color=black, style=rounded  ] ;
+Gemm_1_weights_transposed_3 [ label="{ { <i0> 0} |  [8]\lGemm_1_weights_transposed_3\l(bytes=64 , 5% of total)\l\l 0.624343 0.247844 -0.0910439 -0.000359858 ... | { <o0> 0} }", shape=record, color=black, style=rounded  ] ;
+Gemm_5_weights_transposed_17 [ label="{ { <i0> 0} |  [48]\lGemm_5_weights_transposed_17\l(bytes=64 , 5% of total)\l\l 1.6131 0.871881 0.321977 0.877682 ... | { <o0> 0} }", shape=record, color=black, style=rounded  ] ;
+Input_0_out_0 [ label="{ { <i0> 0} |  [0]\lInput_0_out_0 | { <o0> 0} }", shape=record, color=black, style=rounded  ] ;
+Gemm_3_weights_transposed_10 [ label="{ { <i0> 0} |  [28]\lGemm_3_weights_transposed_10\l(bytes=1024 , 80% of total)\l\l 0.140419 -0.202576 -0.18511 -0.011947 ... | { <o0> 0} }", shape=record, color=black, style=rounded  ] ;
+Gemm_1_reshape_x_2 [ label="{ { < i0>  0 S } | id=[6] tid=[7]\lGemm_1_reshape_x_2\lkind=Reshape\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_1_conv_4 [ label="{ { < i0>  0 S  | < i1>  1 S } | id=[10] tid=[8]\lGemm_1_conv_4\lkind=Conv\lNUM_OPS = 32 OPS( 2.8% of total )\lhw unit=NULL_UNIT\lkernel_shape is 1 1\lgroup i 1\lstrides is 1 1\lpads is 0 0 0 0\ldilations is 1 1\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_1_squeeze_y_5 [ label="{ { < i0>  0 S } | id=[14] tid=[9]\lGemm_1_squeeze_y_5\lkind=Reshape\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_1_add_6 [ label="{ { < i0>  0 S  | < i1>  1 S } | id=[18] tid=[10]\lGemm_1_add_6\lkind=Add\lNUM_OPS = 16 OPS\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Relu_2 [ label="{ { < i0>  0 S } | id=[20] tid=[11]\lRelu_2\lkind=Relu\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_3_reshape_x_9 [ label="{ { < i0>  0 S } | id=[26] tid=[12]\lGemm_3_reshape_x_9\lkind=Reshape\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_3_conv_11 [ label="{ { < i0>  0 S  | < i1>  1 S } | id=[30] tid=[13]\lGemm_3_conv_11\lkind=Conv\lNUM_OPS = 512 OPS( 44% of total )\lhw unit=NULL_UNIT\lkernel_shape is 1 1\lgroup i 1\lstrides is 1 1\lpads is 0 0 0 0\ldilations is 1 1\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_3_squeeze_y_12 [ label="{ { < i0>  0 S } | id=[34] tid=[14]\lGemm_3_squeeze_y_12\lkind=Reshape\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_3_add_13 [ label="{ { < i0>  0 S  | < i1>  1 S } | id=[38] tid=[15]\lGemm_3_add_13\lkind=Add\lNUM_OPS = 16 OPS\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Relu_4 [ label="{ { < i0>  0 S } | id=[40] tid=[16]\lRelu_4\lkind=Relu\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_5_reshape_x_16 [ label="{ { < i0>  0 S } | id=[46] tid=[17]\lGemm_5_reshape_x_16\lkind=Reshape\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_5_conv_18 [ label="{ { < i0>  0 S  | < i1>  1 S } | id=[50] tid=[18]\lGemm_5_conv_18\lkind=Conv\lNUM_OPS = 32 OPS( 2.8% of total )\lhw unit=NULL_UNIT\lkernel_shape is 1 1\lgroup i 1\lstrides is 1 1\lpads is 0 0 0 0\ldilations is 1 1\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_5_squeeze_y_19 [ label="{ { < i0>  0 S } | id=[54] tid=[19]\lGemm_5_squeeze_y_19\lkind=Reshape\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+Gemm_5_add_20 [ label="{ { < i0>  0 S  | < i1>  1 S } | id=[58] tid=[20]\lGemm_5_add_20\lkind=Add\lNUM_OPS = 1 OPS\lhw unit=NULL_UNIT\l | { < o0>  0 S } }", shape=record, color=black, style=rounded  ] ;
+__NN__RETURN__ [ label="{ { < i0>  0 S } | id=[60] tid=[21]\l__NN__RETURN__\lkind=Return\lhw unit=NULL_UNIT\l}", shape=record, color=black, style=rounded  ] ;
+Gemm_1_reshape_x_2:o0:s->Gemm_1_conv_4:i0:n [ label="edge id=[6]\ltid=29 30\l1x1x1x1\lbits=32\lin=out: Float\lGemm_1_reshape_x_2 FLOAT( 1 1 1 1 ) edge bs=4\lout bw=?\l" ]; 
+Gemm_1_weights_transposed_3:o0:s->Gemm_1_conv_4:i1:n [ label="edge id=[8]\ltid=33 34\l16x1x1x1\lbits=32\lin=out: Float\lGemm_1_weights_transposed_3 FLOAT( 16 1 1 1 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_1_conv_4:o0:s->Gemm_1_squeeze_y_5:i0:n [ label="edge id=[10]\ltid=42 43\l1x16x1x1\lbits=32\lin=out: Float\lGemm_1_conv_4 FLOAT( 1 16 1 1 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_1_squeeze_y_5:o0:s->Gemm_1_add_6:i0:n [ label="edge id=[14]\ltid=55 56\l1x16\lbits=32\lin=out: Float\lGemm_1_squeeze_y_5 FLOAT( 1 16 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_1_bias:o0:s->Gemm_1_add_6:i1:n [ label="edge id=[16]\ltid=59 60\l16\lbits=32\lin=out: Float\lGemm_1_bias FLOAT( 16 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_1_add_6:o0:s->Relu_2:i0:n [ label="edge id=[18]\ltid=65 66\l1x16\lbits=32\lin=out: Float\lGemm_1_out_0 FLOAT( 1 16 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_3_reshape_x_9:o0:s->Gemm_3_conv_11:i0:n [ label="edge id=[26]\ltid=93 94\l1x16x1x1\lbits=32\lin=out: Float\lGemm_3_reshape_x_9 FLOAT( 1 16 1 1 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_3_weights_transposed_10:o0:s->Gemm_3_conv_11:i1:n [ label="edge id=[28]\ltid=97 98\l16x16x1x1\lbits=32\lin=out: Float\lGemm_3_weights_transposed_10 FLOAT( 16 16 1 1 ) edge bs=1024\lout bw=?\l" ]; 
+Gemm_3_conv_11:o0:s->Gemm_3_squeeze_y_12:i0:n [ label="edge id=[30]\ltid=106 107\l1x16x1x1\lbits=32\lin=out: Float\lGemm_3_conv_11 FLOAT( 1 16 1 1 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_3_squeeze_y_12:o0:s->Gemm_3_add_13:i0:n [ label="edge id=[34]\ltid=119 120\l1x16\lbits=32\lin=out: Float\lGemm_3_squeeze_y_12 FLOAT( 1 16 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_3_bias:o0:s->Gemm_3_add_13:i1:n [ label="edge id=[36]\ltid=123 124\l16\lbits=32\lin=out: Float\lGemm_3_bias FLOAT( 16 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_3_add_13:o0:s->Relu_4:i0:n [ label="edge id=[38]\ltid=129 130\l1x16\lbits=32\lin=out: Float\lGemm_3_out_0 FLOAT( 1 16 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_5_reshape_x_16:o0:s->Gemm_5_conv_18:i0:n [ label="edge id=[46]\ltid=157 158\l1x16x1x1\lbits=32\lin=out: Float\lGemm_5_reshape_x_16 FLOAT( 1 16 1 1 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_5_weights_transposed_17:o0:s->Gemm_5_conv_18:i1:n [ label="edge id=[48]\ltid=161 162\l1x16x1x1\lbits=32\lin=out: Float\lGemm_5_weights_transposed_17 FLOAT( 1 16 1 1 ) edge bs=64\lout bw=?\l" ]; 
+Gemm_5_conv_18:o0:s->Gemm_5_squeeze_y_19:i0:n [ label="edge id=[50]\ltid=170 171\l1x1x1x1\lbits=32\lin=out: Float\lGemm_5_conv_18 FLOAT( 1 1 1 1 ) edge bs=4\lout bw=?\l" ]; 
+Gemm_5_squeeze_y_19:o0:s->Gemm_5_add_20:i0:n [ label="edge id=[54]\ltid=183 184\l1x1\lbits=32\lin=out: Float\lGemm_5_squeeze_y_19 FLOAT( 1 1 ) edge bs=4\lout bw=?\l" ]; 
+Gemm_5_bias:o0:s->Gemm_5_add_20:i1:n [ label="edge id=[56]\ltid=187 188\l1\lbits=32\lin=out: Float\lGemm_5_bias FLOAT( 1 ) edge bs=4\lout bw=?\l" ]; 
+Gemm_5_add_20:o0:s->__NN__RETURN__:i0:n [ label="edge id=[58]\ltid=193 194\l1x1\lbits=32\lin=out: Float\lGemm_5_out_0 FLOAT( 1 1 ) edge bs=4\lout bw=?\l" ]; 
+Input_0_out_0:o0:s->Gemm_1_reshape_x_2:i0:n [ label="edge id=[60]\ltid=195 196\lbatch: 1(in) 1(out,L) 1(mem,L) \l1x1\lbits=32\lin=out: Float\lInput_0_out_0 FLOAT( 1 1 ) edge bs=4\lout bw=?\l" ]; 
+Relu_2:o0:s->Gemm_3_reshape_x_9:i0:n [ label="edge id=[62]\ltid=197 198\l1x16\lbits=32\lin=out: Float\lRelu_2_out_0 FLOAT( 1 16 ) edge bs=64\lout bw=?\l" ]; 
+Relu_4:o0:s->Gemm_5_reshape_x_16:i0:n [ label="edge id=[64]\ltid=199 200\l1x16\lbits=32\lin=out: Float\lRelu_4_out_0 FLOAT( 1 16 ) edge bs=64\lout bw=?\l" ]; 
+}
